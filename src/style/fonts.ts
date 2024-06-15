@@ -1,0 +1,16 @@
+export enum Fonts {
+  Light = "Rubik-Light",
+  Regular = "Rubik-Regular",
+  Medium = "Rubik-Medium",
+  SemiBold = "Rubik-SemiBold",
+  Bold = "Rubik-Bold",
+  ExtraBold = "Rubik-ExtraBold",
+  Black = "Rubik-Black",
+  Light_Italic = "Rubik-Light-Italic",
+  Regular_Italic = "Rubik-Regular-Italic",
+  Medium_Italic = "Rubik-Medium-Italic",
+  SemiBold_Italic = "Rubik-SemiBold-Italic",
+  Bold_Italic = "Rubik-Bold-Italic",
+  ExtraBold_Italic = "Rubik-ExtraBold-Italic",
+  Black_Italic = "Rubik-Black-Italic",
+}
