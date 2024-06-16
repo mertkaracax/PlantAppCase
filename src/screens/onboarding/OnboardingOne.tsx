@@ -4,14 +4,15 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { StackScreenProps } from "../types";
 import { ch, cw } from "@src/style/dimensions";
 import Header from "@src/components/onboarding/Header";
-import { Font, FontSize } from "@src/style/fonts";
+import { Font } from "@src/style/fonts";
 import { IMAGES } from "@src/assets/images";
 import Footer from "@src/components/UI/Footer";
 import FlowButton from "@src/components/UI/FlowButton";
+import { FontStyles } from "@src/style/general";
 
 const OnboardingOne: React.FC<StackScreenProps> = ({ navigation, route }) => {
   const headerTitle = (
-    <Text style={styles.title}>
+    <Text style={FontStyles.headerTitle}>
       Welcome to <Text style={{ fontFamily: Font.SemiBold }}>Plant App</Text>
     </Text>
   );
@@ -25,6 +26,7 @@ const OnboardingOne: React.FC<StackScreenProps> = ({ navigation, route }) => {
       <Header
         title={headerTitle}
         subtitle="Identify more than 3000+ plants and 88% accuracy."
+        height={ch(85)}
       />
       <View style={styles.imageContainer}>
         <Image style={styles.image} source={IMAGES.onboarding_1.background} />
@@ -38,11 +40,6 @@ const OnboardingOne: React.FC<StackScreenProps> = ({ navigation, route }) => {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-  },
-  title: {
-    fontFamily: Font.Regular,
-    fontSize: FontSize.SIZE28,
-    marginBottom: ch(10),
   },
   imageContainer: {
     height: ch(499),

@@ -15,9 +15,7 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <View style={[styles.headerContainer, { width: width, height: height }]}>
       {title}
-      {subtitle && (
-        <Text style={[styles.subtitle, FontStyles.rubik]}>{subtitle}</Text>
-      )}
+      {subtitle && <Text style={[FontStyles.headerSubtitle]}>{subtitle}</Text>}
     </View>
   );
 };
@@ -28,13 +26,6 @@ const styles = StyleSheet.create({
   headerContainer: {
     marginLeft: cw(24),
     marginTop: ch(12),
-    padding: 8,
-    lineHeight: 33.3,
-  },
-  title: {
-    fontWeight: "300",
-    fontSize: FontSize.SIZE28,
-    color: Color.HeaderText,
   },
   subtitle: {
     color: Color.SubheaderText,
