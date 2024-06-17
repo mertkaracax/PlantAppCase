@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Platform, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { HeaderProps } from "./types";
 import { ch, cw } from "@src/style/dimensions";
@@ -11,9 +11,16 @@ const Header: React.FC<HeaderProps> = ({
   subtitle,
   width = "auto",
   height = "auto",
+  top,
+  left,
 }) => {
   return (
-    <View style={[styles.headerContainer, { width: width, height: height }]}>
+    <View
+      style={[
+        styles.headerContainer,
+        { width: width, height: height, top: top, left: left },
+      ]}
+    >
       {title}
       {subtitle && <Text style={[FontStyles.headerSubtitle]}>{subtitle}</Text>}
     </View>
@@ -26,10 +33,5 @@ const styles = StyleSheet.create({
   headerContainer: {
     marginLeft: cw(24),
     marginTop: ch(12),
-  },
-  subtitle: {
-    color: Color.SubheaderText,
-    fontWeight: "300",
-    fontSize: FontSize.SIZE16,
   },
 });

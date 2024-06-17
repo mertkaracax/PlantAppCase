@@ -1,6 +1,6 @@
-import OnboardingOne from "../screens/onboarding/OnboardingOne";
+import OnboardingOne from "./onboarding/OnboardingOne";
 import OnboardingTwo from "./onboarding/OnboardingTwo";
-import OnboardingThree from "./onboarding/OnboardingThree";
+// import OnboardingThree from "./onboarding/OnboardingTwo";
 import Home from "./home/Home";
 
-export { Home, OnboardingOne, OnboardingTwo, OnboardingThree };
+export { Home, OnboardingOne, OnboardingTwo };

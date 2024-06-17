@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Font, FontSize } from "./fonts";
+import { Font, FontSize, LetterSpace } from "./fonts";
 import { Color } from "./colors";
 import { ch, cw } from "./dimensions";
 
@@ -10,7 +10,15 @@ const generalFontStyles = StyleSheet.create({
     color: Color.HeaderText,
     lineHeight: 33.18,
     maxWidth: cw(315),
-    letterSpacing: 0.07,
+    letterSpacing: LetterSpace.NORMAL,
+  },
+  paywallHeaderTitle: {
+    fontFamily: Font.Light,
+    fontSize: FontSize.SIZE24,
+    color: Color.WHITE,
+    lineHeight: 33.18,
+    maxWidth: cw(315),
+    letterSpacing: LetterSpace.NORMAL,
   },
   headerSubtitle: {
     fontFamily: Font.Regular,

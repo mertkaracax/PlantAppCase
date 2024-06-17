@@ -7,12 +7,13 @@ export const IMAGES = {
     brush: require("./onboarding/Onboarding_2_Brush.png"),
   },
   onboarding_3: {
-    onboarding_3: require("./onboarding/Onboarding_3_BG.png"),
+    background: require("./onboarding/Onboarding_3_BG.png"),
     brush: require("./onboarding/Onboarding_3_Brush.png"),
     artwork: require("./onboarding/Onboarding_3_Artwork.png"),
+    leaves: require("./onboarding/Onboarding_3_leaves.png"),
   },
   paywall: {
-    paywall: require("./paywall/Paywall_BG.png"),
+    background: require("./paywall/Paywall_BG.png"),
   },
 };
 

@@ -1,8 +1,8 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { StackScreenProps } from "../types";
+import { OnboardingScreenProps } from "../types";
 
-const Home: React.FC<StackScreenProps> = ({ navigation, route }) => {
+const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
   return (
     <View>
       <Text>Home</Text>

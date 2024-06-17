@@ -7,11 +7,12 @@ import { Color } from "@src/style/colors";
 type FlowButtonProps = {
   title: string;
   onPress: () => void;
+  style?: any;
 };
 
-const FlowButton: React.FC<FlowButtonProps> = ({ title, onPress }) => {
+const FlowButton: React.FC<FlowButtonProps> = ({ title, onPress, style }) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
+    <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );
@@ -23,7 +24,9 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: Color.OnboardingButtonBg,
     width: cw(327),
-    height: ch(56),
+    // height: ch(56),
+    position: "absolute",
+    top: ch(667),
     borderRadius: 12,
     alignSelf: "center",
     padding: 18,

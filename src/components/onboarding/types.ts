@@ -3,7 +3,9 @@ import { DimensionValue } from "react-native";
 
 export type HeaderProps = {
   title: ReactNode;
-  subtitle?: string;
+  subtitle?: string | ReactNode;
   width?: number | "auto" | DimensionValue;
   height?: number | "auto" | DimensionValue;
+  top?: number | "auto" | DimensionValue;
+  left?: number | "auto" | DimensionValue;
 };
