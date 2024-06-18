@@ -12,7 +12,7 @@ import {
 } from "@expo-google-fonts/rubik";
 
 import { Provider } from "react-redux";
-import { store } from "@src/store/redux";
+import store from "@src/store/redux";
 
 export default function App() {
   const [isLoaded] = useFonts({

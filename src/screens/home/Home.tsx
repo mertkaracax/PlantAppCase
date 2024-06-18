@@ -6,7 +6,7 @@ import {
   StyleSheet,
   ScrollView,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { OnboardingScreenProps } from "../types";
 import Header from "@src/components/onboarding/Header";
 import { StatusBar } from "expo-status-bar";
@@ -15,8 +15,20 @@ import { Font, FontSize } from "@src/style/fonts";
 import Inbox from "@src/components/home/Inbox";
 import QuestionContainer from "@src/components/home/QuestionContainer";
 import CategoriesContainer from "@src/components/home/CategoriesContainer";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { completeOnboarding } from "@src/store/onboardingSlice";
+import { useDispatch } from "react-redux";
 
 const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
+  const dispatch = useDispatch();
+  const completeOnboardingFlow = () => {
+    dispatch(completeOnboarding());
+  };
+
+  useEffect(() => {
+    completeOnboardingFlow();
+  }, []);
+
   const [filter, onChangeFilter] = useState("");
   const title = (
     <Text

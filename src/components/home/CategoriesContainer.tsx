@@ -4,7 +4,7 @@ import { ch, cw } from "@src/style/dimensions";
 import { Font, FontSize } from "@src/style/fonts";
 import { Category } from "@src/models/category";
 import CategoryItem from "./CategoryItem";
-import { getReduxCategories } from "@src/store/redux";
+import { get } from "@src/api/api";
 
 type CategoriesContainerProps = {
   filter?: string;
@@ -13,15 +13,15 @@ type CategoriesContainerProps = {
 const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
   filter = "",
 }) => {
-  const reduxCategories = getReduxCategories();
-
   const [categories, setCategories] = useState<Array<Category>>([]);
 
   useEffect(() => {
-    if (reduxCategories) {
-      setCategories(reduxCategories);
-    }
-  }, [reduxCategories]);
+    const getCategories = async () => {
+      const response = await get("/getCategories");
+      setCategories(response.data);
+    };
+    getCategories();
+  }, []);
 
   return (
     <View style={{ minHeight: ch(230) }}>
