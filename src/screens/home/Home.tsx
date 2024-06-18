@@ -1,4 +1,11 @@
-import { View, Text, Image, TextInput, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  TextInput,
+  StyleSheet,
+  ScrollView,
+} from "react-native";
 import React from "react";
 import { OnboardingScreenProps } from "../types";
 import Header from "@src/components/onboarding/Header";
@@ -87,9 +94,19 @@ const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
           }}
           source={require("@src/assets/images/home/RightLeaf.png")}
         />
-        <Inbox />
-        <QuestionContainer />
-        <CategoriesContainer />
+        <View
+          style={{
+            backgroundColor: "white",
+            height: ch(553),
+            marginTop: ch(24),
+          }}
+        >
+          <ScrollView>
+            <Inbox />
+            <QuestionContainer />
+            <CategoriesContainer />
+          </ScrollView>
+        </View>
       </View>
     </>
   );

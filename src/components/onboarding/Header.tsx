@@ -14,17 +14,22 @@ const Header: React.FC<HeaderProps> = ({
   top,
   left,
   marginTop = ch(12),
+  marginBottom,
+  maxWidth,
 }) => {
   return (
     <View
       style={[
         styles.headerContainer,
         {
-          width: width,
+          width: cw(315),
           height: height,
           top: top,
           left: left,
           marginTop: marginTop,
+          marginBottom: marginBottom,
+          maxWidth: maxWidth,
+          // height: 70,
         },
       ]}
     >

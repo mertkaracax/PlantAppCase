@@ -1,14 +1,8 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import {
-  // OnboardingOne,
-  OnboardingTwo,
-  OnboardingOne,
-} from "@src/screens/index";
+import { OnboardingTwo, OnboardingOne } from "@src/screens/index";
 import { OnboardingScreenNames } from "@src/screens/types";
-
-// import SwiperComponent from "@src/screens/onboarding/Swiper";
+import { Text, View } from "react-native";
 
 const OnboardingNavigator: React.FC = () => {
   const Stack = createNativeStackNavigator();
@@ -18,10 +12,6 @@ const OnboardingNavigator: React.FC = () => {
         headerShown: false,
       }}
     >
-      {/* <Stack.Screen
-        name={OnboardingScreenNames.ONBOARDING_ONE}
-        component={OnboardingOne}
-      /> */}
       <Stack.Screen
         name={OnboardingScreenNames.ONBOARDING_ONE}
         component={OnboardingOne}

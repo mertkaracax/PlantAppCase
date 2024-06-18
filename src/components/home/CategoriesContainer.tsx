@@ -19,14 +19,17 @@ const CategoriesContainer = () => {
   return (
     <View style={{ minHeight: ch(230) }}>
       <View style={styles.container}>
-        <FlatList
+        {categories.map((category) => (
+          <CategoryItem category={category} key={category.id.toString()} />
+        ))}
+        {/* <FlatList
           data={categories}
           numColumns={2}
           showsVerticalScrollIndicator={false}
           renderItem={({ item }) => (
             <CategoryItem category={item} key={item.id.toString()} />
           )}
-        ></FlatList>
+        ></FlatList> */}
       </View>
     </View>
   );
@@ -39,6 +42,9 @@ const styles = StyleSheet.create({
     marginTop: ch(24),
     alignSelf: "center",
     width: cw(327),
+    flexWrap: "wrap",
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   text: {
     fontSize: FontSize.SIZE15,

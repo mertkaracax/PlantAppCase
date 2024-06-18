@@ -55,7 +55,7 @@ const OnboardingTwo: React.FC<OnboardingScreenProps> = ({ navigation }) => {
         </MaskedView>
         <Image style={styles.artwork} source={IMAGES.onboarding_3.artwork} />
         <FlowButton
-          // style={styles.button}
+          style={{ height: ch(56) }}
           title="Continue"
           onPress={continueHandler}
         />
@@ -70,12 +70,12 @@ const OnboardingTwo: React.FC<OnboardingScreenProps> = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   brush: {
-    width: cw(154.12),
-    height: ch(29.93),
+    width: cw(152.13),
+    height: ch(13),
     position: "absolute",
-    left: cw(143),
-    top: ch(85),
-    resizeMode: "contain",
+    right: cw(80),
+    top: ch(95),
+    // resizeMode: "contain",
   },
   artwork: {
     position: "absolute",

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Platform, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import { OnboardingScreenNames } from "@src/screens/types";
 import { ch, cw } from "@src/style/dimensions";
@@ -13,16 +13,17 @@ const PaginationIndicator: React.FC<PaginationProps> = ({ active_screen }) => {
     OnboardingScreenNames
   );
 
-  const active_index: number = Object.keys(OnboardingScreenNames).indexOf(
-    active_screen
-  );
-
   return (
-    <View style={styles.container}>
+    <View
+      style={[
+        styles.container,
+        { bottom: Platform.OS === "android" ? ch(25) : ch(46.5), zIndex: 4 },
+      ]}
+    >
       {pages.map((page) => (
         <View
           key={page}
-          style={page === active_screen ? styles.activeDot : styles.dot}
+          style={[page === active_screen ? styles.activeDot : styles.dot]}
         ></View>
       ))}
     </View>
@@ -36,7 +37,6 @@ const styles = StyleSheet.create({
     width: cw(38),
     height: ch(10),
     position: "absolute",
-    top: ch(755.5),
     flexDirection: "row",
     justifyContent: "space-between",
     alignSelf: "center",

@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 0.5,
     borderColor: "#3C3C431A",
-    marginRight: cw(11),
+
+    // marginRight: cw(11),
     marginBottom: ch(16),
     backgroundColor: "#F4F6F6",
   },

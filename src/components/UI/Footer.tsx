@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Platform, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { ch, cw } from "@src/style/dimensions";
 import { Font, FontSize } from "@src/style/fonts";
@@ -7,7 +7,12 @@ import { Color } from "@src/style/colors";
 
 const Footer = () => {
   return (
-    <Text style={[styles.footer]}>
+    <Text
+      style={[
+        styles.footer,
+        { bottom: Platform.OS == "android" ? ch(14) : ch(42) },
+      ]}
+    >
       By tapping next, you are agreeing to PlantID{" "}
       <Text style={{ textDecorationLine: "underline" }}>Terms of Use</Text> &{" "}
       <Text style={{ textDecorationLine: "underline" }}>Privacy Policy</Text>.
@@ -20,7 +25,7 @@ export default Footer;
 const styles = StyleSheet.create({
   footer: {
     position: "absolute",
-    top: ch(740),
+    bottom: ch(42),
     color: Color.FooterText,
     fontSize: FontSize.SIZE11,
     fontFamily: Font.Regular,

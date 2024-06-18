@@ -37,3 +37,7 @@ export enum DotSize {
   BIG_RADIUS = <number>ch(5),
   SMALL_RADIUS = <number>ch(3),
 }
+
+export enum LineHeight {
+  LINE33_18 = <number>ch(33.18),
+}

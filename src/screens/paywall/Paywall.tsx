@@ -82,23 +82,13 @@ const Paywall: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
             subtitle="Process"
           />
           <FeatureItem
-            image={require("@src/assets/icons/Speed.png")}
-            title="Faster"
-            subtitle="Prdocess"
+            image={require("@src/assets/icons/Detailed.png")}
+            title="Detailed"
+            subtitle="Plant care"
           />
         </Features>
       </ImageBackground>
-      <PaymentContainer>
-        <PaymentOption />
-        <PaymentOption />
-        <TouchableOpacity style={styles.button}>
-          <View>
-            <Text style={{ fontSize: 16, color: "white" }}>
-              Try free for 3 days
-            </Text>
-          </View>
-        </TouchableOpacity>
-      </PaymentContainer>
+      <PaymentContainer />
       <Text
         style={{
           marginTop: ch(8),
@@ -136,17 +126,6 @@ const styles = StyleSheet.create({
     top: 0,
     height: ch(490),
     width: cw(375),
-  },
-  button: {
-    height: ch(52),
-    width: cw(327),
-    backgroundColor: "#28AF6E",
-    borderRadius: 14,
-    zIndex: 44,
-    alignSelf: "center",
-    marginTop: ch(10),
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
 

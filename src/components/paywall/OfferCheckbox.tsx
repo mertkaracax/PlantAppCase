@@ -3,10 +3,19 @@ import React from "react";
 import { cw } from "@src/style/dimensions";
 import { Color } from "@src/style/colors";
 
-const OfferCheckbox = () => {
+type OfferCheckboxParams = {
+  isActive: boolean;
+};
+
+const OfferCheckbox: React.FC<OfferCheckboxParams> = ({ isActive }) => {
   return (
-    <View style={styles.outer}>
-      <View style={styles.inner}></View>
+    <View
+      style={[
+        styles.outer,
+        { backgroundColor: isActive ? "#28AF6E" : "#FFFFFF26" },
+      ]}
+    >
+      {isActive && <View style={styles.inner}></View>}
     </View>
   );
 };

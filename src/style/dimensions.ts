@@ -12,4 +12,6 @@ function calculateComponentHeight(height: number): DimensionValue {
   return deviceHeight * baseRatio;
 }
 
+export const SCREEN = Dimensions.get("screen");
+
 export { calculateComponentWidth as cw, calculateComponentHeight as ch };

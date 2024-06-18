@@ -1,5 +1,5 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import { ch, cw } from "@src/style/dimensions";
 import OfferCheckbox from "./OfferCheckbox";
 import { Font, FontSize } from "@src/style/fonts";
@@ -11,16 +11,38 @@ import { LinearGradient } from "expo-linear-gradient";
 //               : ['rgba(255, 255, 255, 0.05)', 'rgba(255, 255, 255, 0.05)']
 //           }
 
-const PaymentOption = () => {
-  const [selected, setSelected] = useState(false);
+type PaymentOptionpProps = {
+  name: string;
+  title: string;
+  description: string;
+  isActive: boolean;
+  onPress: (plan: string) => void;
+};
+
+const PaymentOption: React.FC<PaymentOptionpProps> = ({
+  name,
+  title,
+  description,
+  isActive,
+  onPress,
+}) => {
   return (
-    <View style={styles.button}>
-      <Pressable style={styles.container}>
+    <View
+      style={[
+        styles.button,
+        { borderColor: isActive ? "#28AF6E" : "#FFFFFF4D" },
+      ]}
+    >
+      <Pressable style={styles.container} onPress={onPress.bind(this, name)}>
         <LinearGradient
-          colors={["rgba(40, 175, 110, 0.17)", "rgba(40, 175, 110, 0)"]}
+          colors={
+            isActive
+              ? ["rgba(40, 175, 110, 0.17)", "rgba(40, 175, 110, 0)"]
+              : ["transparent", "transparent"]
+          }
           start={[1, 0]}
           end={[0, 1]}
-          style={{ flex: 1 }}
+          style={{ flex: 1, borderRadius: 14 }}
         >
           <View
             style={{
@@ -31,30 +53,33 @@ const PaymentOption = () => {
               position: "relative",
             }}
           >
-            <View
-              style={{
-                position: "absolute",
-                right: 0,
-                top: 0,
-                height: ch(26),
-                width: cw(77),
-                backgroundColor: "#28AF6E",
-                alignItems: "center",
-                justifyContent: "center",
-                borderTopRightRadius: 14,
-                borderBottomLeftRadius: 20,
-              }}
-            >
-              <Text
+            {isActive && name === "yearly" && (
+              <View
                 style={{
-                  fontFamily: Font.Medium,
-                  fontSize: FontSize.SIZE12,
+                  position: "absolute",
+                  right: 0,
+                  top: 0,
+                  height: ch(26),
+                  width: cw(77),
+                  backgroundColor: "#28AF6E",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderTopRightRadius: 14,
+                  borderBottomLeftRadius: 20,
                 }}
               >
-                Save 50%
-              </Text>
-            </View>
-            <OfferCheckbox />
+                <Text
+                  style={{
+                    fontFamily: Font.Medium,
+                    fontSize: FontSize.SIZE12,
+                    color: Color.WHITE,
+                  }}
+                >
+                  Save 50%
+                </Text>
+              </View>
+            )}
+            <OfferCheckbox isActive={isActive} />
             <View>
               <Text
                 style={{
@@ -63,7 +88,7 @@ const PaymentOption = () => {
                   fontFamily: Font.Medium,
                 }}
               >
-                1 Month
+                {title}
               </Text>
               <Text
                 style={{
@@ -72,7 +97,7 @@ const PaymentOption = () => {
                   fontSize: FontSize.SIZE12,
                 }}
               >
-                $2.99/month, auto renewable
+                {description}
               </Text>
             </View>
           </View>
@@ -89,7 +114,7 @@ const styles = StyleSheet.create({
     height: ch(60),
     width: cw(327),
     borderRadius: 14,
-    borderColor: "#FFFFFF4D",
+
     backgroundColor: "#1c2923",
     borderWidth: 0.5,
     alignSelf: "center",

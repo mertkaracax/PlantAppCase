@@ -19,8 +19,8 @@ import { FontStyles } from "@src/style/general";
 
 const Intro: React.FC<OnboardingScreenProps> = ({ route, navigation }) => {
   const headerTitle = (
-    <Text style={FontStyles.headerTitle}>
-      Welcome to <Text style={{ fontFamily: Font.SemiBold }}>Plant App</Text>
+    <Text style={[FontStyles.headerTitle, { maxWidth: cw(375) }]}>
+      Welcome to <Text style={{ fontFamily: Font.SemiBold }}>PlantApp</Text>
     </Text>
   );
 
@@ -34,11 +34,13 @@ const Intro: React.FC<OnboardingScreenProps> = ({ route, navigation }) => {
           title={headerTitle}
           subtitle="Identify more than 3000+ plants and 88% accuracy."
           height={ch(85)}
+          marginBottom={ch(24)}
         />
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={IMAGES.onboarding_1.background} />
         </View>
         <FlowButton
+          style={{ height: ch(56) }}
           title="Get Started"
           onPress={() => {
             navigation.navigate("Onboarding");
@@ -56,7 +58,6 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     height: ch(499),
-    marginTop: ch(24),
     width: "100%",
   },
   image: {
