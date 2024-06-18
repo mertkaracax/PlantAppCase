@@ -6,7 +6,7 @@ import {
   StyleSheet,
   ScrollView,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { OnboardingScreenProps } from "../types";
 import Header from "@src/components/onboarding/Header";
 import { StatusBar } from "expo-status-bar";
@@ -17,6 +17,7 @@ import QuestionContainer from "@src/components/home/QuestionContainer";
 import CategoriesContainer from "@src/components/home/CategoriesContainer";
 
 const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
+  const [filter, onChangeFilter] = useState("");
   const title = (
     <Text
       style={{
@@ -63,6 +64,7 @@ const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
           />
           <TextInput
             placeholder="Search for plants"
+            onChangeText={onChangeFilter}
             style={{
               fontFamily: Font.Regular,
               fontSize: FontSize.SIZE15_5,
@@ -104,7 +106,7 @@ const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
           <ScrollView>
             <Inbox />
             <QuestionContainer />
-            <CategoriesContainer />
+            <CategoriesContainer filter={filter} />
           </ScrollView>
         </View>
       </View>

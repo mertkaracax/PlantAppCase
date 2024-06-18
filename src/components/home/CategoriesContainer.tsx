@@ -6,7 +6,13 @@ import { Category } from "@src/models/category";
 import CategoryItem from "./CategoryItem";
 import { getReduxCategories } from "@src/store/redux";
 
-const CategoriesContainer = () => {
+type CategoriesContainerProps = {
+  filter?: string;
+};
+
+const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
+  filter = "",
+}) => {
   const reduxCategories = getReduxCategories();
 
   const [categories, setCategories] = useState<Array<Category>>([]);
@@ -22,9 +28,15 @@ const CategoriesContainer = () => {
     <View style={{ minHeight: ch(230) }}>
       <View style={styles.container}>
         {categories &&
-          categories.map((category) => (
-            <CategoryItem category={category} key={category.id.toString()} />
-          ))}
+          categories
+            .filter((category) => {
+              return category.title
+                .toLowerCase()
+                .startsWith(filter?.toLowerCase());
+            })
+            .map((category) => (
+              <CategoryItem category={category} key={category.id.toString()} />
+            ))}
       </View>
     </View>
   );
