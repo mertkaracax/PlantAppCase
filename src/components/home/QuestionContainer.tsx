@@ -5,13 +5,14 @@ import { Font, FontSize } from "@src/style/fonts";
 import { get } from "@src/api/api";
 import { Question } from "@src/models/question";
 import QuestionItem from "./QuestionItem";
+import { Endpoints } from "@src/api/endpoints";
 
 const QuestionContainer = () => {
   const [questions, setQuestions] = useState<Array<Question>>([]);
 
   useEffect(() => {
     const getQuestions = async () => {
-      const response = await get("/getQuestions");
+      const response = await get(Endpoints.GET_QUESTIONS);
       setQuestions(response);
     };
     getQuestions();

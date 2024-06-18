@@ -13,6 +13,7 @@ import {
   setOnboardingState,
   completeOnboarding,
 } from "@src/store/onboardingSlice";
+import { Color } from "@src/style/colors";
 
 const BaseNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -48,7 +49,7 @@ const BaseNavigator = () => {
   if (loading) {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ActivityIndicator size="large" color="#0000ff" />
+        <ActivityIndicator size="large" color={Color.OnboardingButtonBg} />
       </View>
     );
   }
@@ -80,9 +81,10 @@ const BaseNavigator = () => {
               component={Paywall}
               options={{ title: "Paywall", gestureEnabled: false }}
             />
+            <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
           </>
         ) : (
-          <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
+          <Stack.Screen name="Main" component={BottomTabNavigator} />
         )}
       </Stack.Navigator>
     </NavigationContainer>

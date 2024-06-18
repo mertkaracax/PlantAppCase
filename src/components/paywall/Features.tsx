@@ -15,7 +15,7 @@ interface FeaturesProps {
   duration?: number;
 }
 
-const Features: React.FC<FeaturesProps> = ({ children, duration = 10000 }) => {
+const Features: React.FC<FeaturesProps> = ({ children, duration = 12000 }) => {
   const scrollX = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {

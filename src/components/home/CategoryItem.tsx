@@ -1,7 +1,6 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { ch, cw } from "@src/style/dimensions";
-import { Question } from "@src/models/question";
 import { Font, FontSize } from "@src/style/fonts";
 import { Color } from "@src/style/colors";
 import { Category } from "@src/models/category";
@@ -34,8 +33,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 0.5,
     borderColor: "#3C3C431A",
-
-    // marginRight: cw(11),
     marginBottom: ch(16),
     backgroundColor: "#F4F6F6",
   },

@@ -16,7 +16,10 @@ import Inbox from "@src/components/home/Inbox";
 import QuestionContainer from "@src/components/home/QuestionContainer";
 import CategoriesContainer from "@src/components/home/CategoriesContainer";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { completeOnboarding } from "@src/store/onboardingSlice";
+import {
+  completeOnboarding,
+  setOnboardingState,
+} from "@src/store/onboardingSlice";
 import { useDispatch } from "react-redux";
 
 const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
@@ -26,7 +29,8 @@ const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
   };
 
   useEffect(() => {
-    completeOnboardingFlow();
+    // completeOnboardingFlow();
+    setOnboardingState(false);
   }, []);
 
   const [filter, onChangeFilter] = useState("");
@@ -60,7 +64,6 @@ const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
         style={{
           height: ch(175),
           width: "100%",
-          // borderBottomWidth: 2,
           position: "relative",
         }}
       >

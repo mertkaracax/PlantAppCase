@@ -23,13 +23,12 @@ const Header: React.FC<HeaderProps> = ({
         styles.headerContainer,
         {
           width: cw(315),
+          maxWidth: maxWidth,
           height: height,
           top: top,
           left: left,
           marginTop: marginTop,
           marginBottom: marginBottom,
-          maxWidth: maxWidth,
-          // height: 70,
         },
       ]}
     >

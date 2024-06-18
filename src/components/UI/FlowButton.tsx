@@ -12,11 +12,11 @@ import { Color } from "@src/style/colors";
 
 type FlowButtonProps = {
   title: string;
-  onPress: () => void;
   style?: any;
+  onPress: () => void;
 };
 
-const FlowButton: React.FC<FlowButtonProps> = ({ title, onPress, style }) => {
+const FlowButton: React.FC<FlowButtonProps> = ({ title, style, onPress }) => {
   return (
     <TouchableOpacity
       style={[
@@ -38,14 +38,9 @@ const styles = StyleSheet.create({
     backgroundColor: Color.OnboardingButtonBg,
     width: cw(327),
     bottom: ch(89),
-    // height: ch(56),
     position: "absolute",
-    // top: ch(667),
     borderRadius: 12,
     alignSelf: "center",
-    // padding: 18,
-    // paddingHorizontal: cw(18),
-    // paddingVertical: ch(16),
     alignItems: "center",
     justifyContent: "center",
   },

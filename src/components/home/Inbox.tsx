@@ -3,10 +3,16 @@ import React from "react";
 import { ch, cw } from "@src/style/dimensions";
 import MaskedView from "@react-native-masked-view/masked-view";
 import { LinearGradient } from "expo-linear-gradient";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Inbox = () => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => {
+        AsyncStorage.setItem("onboardingCompleted", JSON.stringify(false));
+      }}
+    >
       <Image
         style={styles.image}
         source={require("@src/assets/icons/Mail.png")}

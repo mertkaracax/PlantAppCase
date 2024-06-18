@@ -5,6 +5,7 @@ import { Font, FontSize } from "@src/style/fonts";
 import { Category } from "@src/models/category";
 import CategoryItem from "./CategoryItem";
 import { get } from "@src/api/api";
+import { Endpoints } from "@src/api/endpoints";
 
 type CategoriesContainerProps = {
   filter?: string;
@@ -17,7 +18,7 @@ const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
 
   useEffect(() => {
     const getCategories = async () => {
-      const response = await get("/getCategories");
+      const response = await get(Endpoints.GET_CATEGORIES);
       setCategories(response.data);
     };
     getCategories();
