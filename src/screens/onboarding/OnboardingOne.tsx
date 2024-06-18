@@ -1,4 +1,4 @@
-import { View, Text, Button, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, ImageBackground } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { OnboardingScreenNames, OnboardingScreenProps } from "../types";
@@ -27,22 +27,27 @@ const OnboardingOne: React.FC<OnboardingScreenProps> = ({
   );
 
   return (
-    <SafeAreaView>
-      <Header title={headerTitle} height={ch(66)} />
-      <Image source={IMAGES.onboarding_2.brush} style={styles.brush} />
-      <View style={styles.imageContainer}>
-        <Image style={styles.image} source={IMAGES.onboarding_2.background} />
-      </View>
-      <FlowButton
-        title="Continue"
-        onPress={() => {
-          navigation.navigate(OnboardingScreenNames.ONBOARDING_TWO);
-        }}
-      />
-      <PaginationIndicator
-        active_screen={OnboardingScreenNames.ONBOARDING_ONE}
-      />
-    </SafeAreaView>
+    <ImageBackground
+      style={{ flex: 1 }}
+      source={require("@src/assets/images/onboarding/o1.png")}
+    >
+      <SafeAreaView>
+        <Header title={headerTitle} height={ch(66)} />
+        <Image source={IMAGES.onboarding_2.brush} style={styles.brush} />
+        <View style={styles.imageContainer}>
+          <Image style={styles.image} source={IMAGES.onboarding_2.background} />
+        </View>
+        <FlowButton
+          title="Continue"
+          onPress={() => {
+            navigation.navigate(OnboardingScreenNames.ONBOARDING_TWO);
+          }}
+        />
+        <PaginationIndicator
+          active_screen={OnboardingScreenNames.ONBOARDING_ONE}
+        />
+      </SafeAreaView>
+    </ImageBackground>
   );
 };
 

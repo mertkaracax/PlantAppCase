@@ -19,7 +19,7 @@ import {
 } from "@expo-google-fonts/rubik";
 
 export default function App() {
-  useFonts({
+  const [isLoaded] = useFonts({
     Rubik_300Light,
     Rubik_400Regular,
     Rubik_500Medium,
@@ -35,10 +35,11 @@ export default function App() {
     // Rubik_800ExtraBold_Italic,
     // Rubik_900Black_Italic,
   });
+
   return (
     <>
       <StatusBar style="dark" />
-      <BaseNavigator />
+      {isLoaded && <BaseNavigator />}
     </>
   );
 }

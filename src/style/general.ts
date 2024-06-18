@@ -20,9 +20,15 @@ const generalFontStyles = StyleSheet.create({
     maxWidth: cw(315),
     letterSpacing: LetterSpace.NORMAL,
   },
+  paywallHeaderSubtitle: {
+    fontSize: FontSize.SIZE17,
+    color: Color.WHITE_TRANSPARENT,
+    lineHeight: <number>ch(24),
+  },
   headerSubtitle: {
     fontFamily: Font.Regular,
     marginTop: ch(5),
+    maxWidth: cw(300),
     color: Color.SubheaderText,
     fontSize: FontSize.SIZE16,
     lineHeight: 22,

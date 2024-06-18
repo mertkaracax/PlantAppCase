@@ -30,13 +30,11 @@ const BaseNavigatior = () => {
         <Stack.Screen
           name="Paywall"
           component={Paywall}
-          options={{ title: "Paywall" }}
+          options={{
+            title: "Paywall",
+          }}
         />
-        <Stack.Screen
-          name="BottomTab"
-          component={BottomTabNavigator}
-          options={{ title: "Home" }}
-        />
+        <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
       </Stack.Navigator>
     </NavigationContainer>
   );

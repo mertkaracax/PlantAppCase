@@ -1,5 +1,6 @@
 export enum Color {
   WHITE = "#FFFFFF",
+  WHITE_TRANSPARENT = "#FFFFFFB2",
   HeaderText = "#13231B",
   SubheaderText = "#13231BB2",
   OnboardingButtonText = "#FFFFFF",

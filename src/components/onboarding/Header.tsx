@@ -13,16 +13,27 @@ const Header: React.FC<HeaderProps> = ({
   height = "auto",
   top,
   left,
+  marginTop = ch(12),
 }) => {
   return (
     <View
       style={[
         styles.headerContainer,
-        { width: width, height: height, top: top, left: left },
+        {
+          width: width,
+          height: height,
+          top: top,
+          left: left,
+          marginTop: marginTop,
+        },
       ]}
     >
       {title}
-      {subtitle && <Text style={[FontStyles.headerSubtitle]}>{subtitle}</Text>}
+      {typeof subtitle === "string" ? (
+        <Text style={[FontStyles.headerSubtitle]}>{subtitle}</Text>
+      ) : (
+        React.isValidElement(subtitle) && subtitle
+      )}
     </View>
   );
 };

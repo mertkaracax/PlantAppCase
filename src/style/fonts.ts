@@ -11,9 +11,16 @@ export enum Font {
 }
 
 export enum FontSize {
+  SIZE9 = <number>cw(9),
+  SIZE10 = <number>cw(10),
   SIZE11 = <number>cw(11),
+  SIZE12 = <number>cw(12),
+  SIZE13 = <number>cw(13),
   SIZE15 = <number>cw(15),
+  SIZE15_5 = <number>cw(15.5),
   SIZE16 = <number>cw(16),
+  SIZE17 = <number>cw(17),
+  SIZE20 = <number>cw(20),
   SIZE24 = <number>cw(24),
   SIZE28 = <number>cw(28),
   SIZE30 = <number>cw(30),

@@ -21,6 +21,7 @@ const PaginationIndicator: React.FC<PaginationProps> = ({ active_screen }) => {
     <View style={styles.container}>
       {pages.map((page) => (
         <View
+          key={page}
           style={page === active_screen ? styles.activeDot : styles.dot}
         ></View>
       ))}

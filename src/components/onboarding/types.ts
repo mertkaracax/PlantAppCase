@@ -8,4 +8,5 @@ export type HeaderProps = {
   height?: number | "auto" | DimensionValue;
   top?: number | "auto" | DimensionValue;
   left?: number | "auto" | DimensionValue;
+  marginTop?: number | "auto" | DimensionValue;
 };

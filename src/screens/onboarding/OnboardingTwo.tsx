@@ -1,11 +1,7 @@
 import { View, Text, StyleSheet, Image, ImageBackground } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import {
-  NavigatorNames,
-  OnboardingScreenNames,
-  OnboardingScreenProps,
-} from "../types";
+import { OnboardingScreenNames, OnboardingScreenProps } from "../types";
 import { Font, LetterSpace } from "@src/style/fonts";
 import { FontStyles } from "@src/style/general";
 import Header from "@src/components/onboarding/Header";
@@ -33,12 +29,13 @@ const OnboardingTwo: React.FC<OnboardingScreenProps> = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <ImageBackground
-        style={{ flex: 1 }}
-        source={IMAGES.onboarding_3.leaves}
-        resizeMode="contain"
-      >
+    <ImageBackground
+      resizeMethod="resize"
+      style={{ flex: 1 }}
+      source={IMAGES.onboarding_3.leaves}
+      resizeMode="contain"
+    >
+      <SafeAreaView style={{ flex: 1 }}>
         <Header title={headerTitle} height={ch(49)} />
         <Image source={IMAGES.onboarding_3.brush} style={styles.brush} />
         <MaskedView
@@ -47,7 +44,7 @@ const OnboardingTwo: React.FC<OnboardingScreenProps> = ({ navigation }) => {
               <LinearGradient
                 colors={["black", "black", "transparent"]}
                 locations={[0, 0.5, 1]}
-                start={{ x: 0.5, y: 0 }}
+                start={{ x: 0.5, y: 0.6 }}
                 end={{ x: 0.5, y: 1 }}
                 style={styles.gradient}
               />
@@ -58,15 +55,16 @@ const OnboardingTwo: React.FC<OnboardingScreenProps> = ({ navigation }) => {
         </MaskedView>
         <Image style={styles.artwork} source={IMAGES.onboarding_3.artwork} />
         <FlowButton
-          style={styles.button}
+          // style={styles.button}
           title="Continue"
           onPress={continueHandler}
         />
-      </ImageBackground>
-      <PaginationIndicator
-        active_screen={OnboardingScreenNames.ONBOARDING_TWO}
-      />
-    </SafeAreaView>
+
+        <PaginationIndicator
+          active_screen={OnboardingScreenNames.ONBOARDING_TWO}
+        />
+      </SafeAreaView>
+    </ImageBackground>
   );
 };
 
@@ -76,18 +74,13 @@ const styles = StyleSheet.create({
     height: ch(29.93),
     position: "absolute",
     left: cw(143),
-    top: ch(48),
-  },
-  imageContainer: {
-    height: ch(540),
-    width: ch(261),
-    alignSelf: "center",
-    marginTop: ch(79),
+    top: ch(85),
+    resizeMode: "contain",
   },
   artwork: {
     position: "absolute",
     left: cw(195),
-    top: ch(81),
+    top: ch(128),
     overflow: "visible",
     height: ch(185),
     width: cw(167.69),
@@ -100,11 +93,6 @@ const styles = StyleSheet.create({
     marginTop: ch(79),
     position: "relative",
     resizeMode: "contain",
-  },
-  button: {
-    position: "absolute",
-    top: ch(620),
-    alignSelf: "center",
   },
   maskContainer: {
     flex: 1,

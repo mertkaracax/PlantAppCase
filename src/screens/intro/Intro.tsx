@@ -1,4 +1,11 @@
-import { Text, StyleSheet, Image, TouchableOpacity, View } from "react-native";
+import {
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  View,
+  ImageBackground,
+} from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { OnboardingScreenNames, OnboardingScreenProps } from "../types";
@@ -18,23 +25,28 @@ const Intro: React.FC<OnboardingScreenProps> = ({ route, navigation }) => {
   );
 
   return (
-    <SafeAreaView style={styles.root}>
-      <Header
-        title={headerTitle}
-        subtitle="Identify more than 3000+ plants and 88% accuracy."
-        height={ch(85)}
-      />
-      <View style={styles.imageContainer}>
-        <Image style={styles.image} source={IMAGES.onboarding_1.background} />
-      </View>
-      <FlowButton
-        title="Get Started"
-        onPress={() => {
-          navigation.navigate("Onboarding");
-        }}
-      />
-      <Footer />
-    </SafeAreaView>
+    <ImageBackground
+      style={{ flex: 1 }}
+      source={require("@src/assets/images/onboarding/o1.png")}
+    >
+      <SafeAreaView style={styles.root}>
+        <Header
+          title={headerTitle}
+          subtitle="Identify more than 3000+ plants and 88% accuracy."
+          height={ch(85)}
+        />
+        <View style={styles.imageContainer}>
+          <Image style={styles.image} source={IMAGES.onboarding_1.background} />
+        </View>
+        <FlowButton
+          title="Get Started"
+          onPress={() => {
+            navigation.navigate("Onboarding");
+          }}
+        />
+        <Footer />
+      </SafeAreaView>
+    </ImageBackground>
   );
 };
 
