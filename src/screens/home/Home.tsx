@@ -29,8 +29,7 @@ const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
   };
 
   useEffect(() => {
-    // completeOnboardingFlow();
-    setOnboardingState(false);
+    completeOnboardingFlow();
   }, []);
 
   const [filter, onChangeFilter] = useState("");
