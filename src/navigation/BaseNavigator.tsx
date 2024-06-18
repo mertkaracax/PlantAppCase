@@ -70,7 +70,10 @@ const BaseNavigator = () => {
             <Stack.Screen
               name="Onboarding"
               component={OnboardingNavigator}
-              options={{ title: "Onboarding", gestureEnabled: false }}
+              options={{
+                title: "Onboarding",
+                gestureEnabled: false,
+              }}
             />
             <Stack.Screen
               name="Paywall"

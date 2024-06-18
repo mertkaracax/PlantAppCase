@@ -17,11 +17,13 @@ import { SCREEN, ch, cw } from "@src/style/dimensions";
 import { IMAGES } from "@src/assets/images";
 import FlowButton from "@src/components/UI/FlowButton";
 import PaginationIndicator from "@src/components/onboarding/PaginationIndicator";
+import { useBackBlocker } from "@src/hooks/navigationHooks";
 
 const OnboardingOne: React.FC<OnboardingScreenProps> = ({
   navigation,
   route,
 }) => {
+  useBackBlocker();
   const headerTitle = (
     <Text
       numberOfLines={2}

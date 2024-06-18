@@ -6,6 +6,9 @@ export const get = async (path: string) => {
     .then((response) => response.json())
     .then((data) => {
       return data;
+    })
+    .catch((error) => {
+      throw new Error(error.message);
     });
 
   return data;

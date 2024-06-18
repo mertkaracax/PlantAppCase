@@ -8,7 +8,6 @@ import {
   Image,
 } from "react-native";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { OnboardingScreenProps } from "../types";
 import { IMAGES } from "@src/assets/images";
 import { ch, cw } from "@src/style/dimensions";
@@ -19,10 +18,10 @@ import { Font, FontSize } from "@src/style/fonts";
 import Features from "@src/components/paywall/Features";
 import FeatureItem from "@src/components/paywall/FeatureItem";
 import PaymentContainer from "@src/components/paywall/PaymentContainer";
-import PaymentOption from "@src/components/paywall/PaymentOption";
-import FlowButton from "@src/components/UI/FlowButton";
+import { useBackBlocker } from "@src/hooks/navigationHooks";
 
 const Paywall: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
+  useBackBlocker();
   const headerTitle = (
     <Text style={FontStyles.paywallHeaderTitle}>
       <Text style={{ fontFamily: Font.ExtraBold, color: "white" }}>

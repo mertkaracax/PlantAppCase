@@ -11,8 +11,10 @@ import FlowButton from "@src/components/UI/FlowButton";
 import MaskedView from "@react-native-masked-view/masked-view";
 import { LinearGradient } from "expo-linear-gradient";
 import PaginationIndicator from "@src/components/onboarding/PaginationIndicator";
+import { useBackBlocker } from "@src/hooks/navigationHooks";
 
 const OnboardingTwo: React.FC<OnboardingScreenProps> = ({ navigation }) => {
+  useBackBlocker();
   const headerTitle = (
     <Text
       style={[
