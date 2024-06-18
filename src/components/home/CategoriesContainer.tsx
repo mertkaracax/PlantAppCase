@@ -1,35 +1,30 @@
-import { FlatList, ScrollView, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { ch, cw } from "@src/style/dimensions";
 import { Font, FontSize } from "@src/style/fonts";
-import { get } from "@src/api/api";
 import { Category } from "@src/models/category";
 import CategoryItem from "./CategoryItem";
+import { getReduxCategories } from "@src/store/redux";
 
 const CategoriesContainer = () => {
+  const reduxCategories = getReduxCategories();
+
   const [categories, setCategories] = useState<Array<Category>>([]);
+
   useEffect(() => {
-    const getCategories = async () => {
-      const response = await get("/getCategories");
-      setCategories(response.data);
-    };
-    getCategories();
-  }, []);
+    if (reduxCategories) {
+      console.log("aaaaaa", reduxCategories);
+      setCategories(reduxCategories);
+    }
+  }, [reduxCategories]);
 
   return (
     <View style={{ minHeight: ch(230) }}>
       <View style={styles.container}>
-        {categories.map((category) => (
-          <CategoryItem category={category} key={category.id.toString()} />
-        ))}
-        {/* <FlatList
-          data={categories}
-          numColumns={2}
-          showsVerticalScrollIndicator={false}
-          renderItem={({ item }) => (
-            <CategoryItem category={item} key={item.id.toString()} />
-          )}
-        ></FlatList> */}
+        {categories &&
+          categories.map((category) => (
+            <CategoryItem category={category} key={category.id.toString()} />
+          ))}
       </View>
     </View>
   );

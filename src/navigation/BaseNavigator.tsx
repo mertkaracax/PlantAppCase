@@ -1,14 +1,47 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import BottomTabNavigator from "./BottomTabNavigator";
 import Paywall from "@src/screens/paywall/Paywall";
 import OnboardingNavigator from "./OnboardingNavigator";
 import Intro from "@src/screens/intro/Intro";
+import { setQuestions } from "@src/store/slices/questionSlice";
+import { get } from "@src/api/api";
+import { useDispatch } from "react-redux";
+import { setCategories } from "@src/store/slices/categorySlice";
+import { Endpoints } from "@src/api/endpoints";
 
-// import SwiperComponent from "@src/screens/onboarding/Swiper";
+const BaseNavigator = () => {
+  const dispatch = useDispatch();
 
-const BaseNavigatior = () => {
+  useEffect(() => {
+    const getQuestions = async () => {
+      try {
+        const response = await get(Endpoints.GET_QUESTIONS);
+        // console.log(response);
+        dispatch(setQuestions({ questions: response }));
+      } catch (error) {
+        console.error("Failed to fetch questions:", error);
+      }
+    };
+
+    getQuestions();
+  }, []);
+
+  useEffect(() => {
+    const getCategories = async () => {
+      try {
+        const response = await get(Endpoints.GET_CATEGORIES);
+        // console.log(response);
+        dispatch(setCategories({ categories: response.data }));
+      } catch (error) {
+        console.error("Failed to fetch questions:", error);
+      }
+    };
+
+    getCategories();
+  }, []);
+
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
@@ -40,4 +73,4 @@ const BaseNavigatior = () => {
   );
 };
 
-export default BaseNavigatior;
+export default BaseNavigator;

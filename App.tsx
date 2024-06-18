@@ -9,14 +9,10 @@ import {
   Rubik_700Bold,
   Rubik_800ExtraBold,
   Rubik_900Black,
-  // Rubik_300Light_Italic,
-  // Rubik_400Regular_Italic,
-  // Rubik_500Medium_Italic,
-  // Rubik_600SemiBold_Italic,
-  // Rubik_700Bold_Italic,
-  // Rubik_800ExtraBold_Italic,
-  // Rubik_900Black_Italic,
 } from "@expo-google-fonts/rubik";
+
+import { Provider } from "react-redux";
+import { store } from "@src/store/redux";
 
 export default function App() {
   const [isLoaded] = useFonts({
@@ -27,19 +23,12 @@ export default function App() {
     Rubik_700Bold,
     Rubik_800ExtraBold,
     Rubik_900Black,
-    // Rubik_300Light_Italic,
-    // Rubik_400Regular_Italic,
-    // Rubik_500Medium_Italic,
-    // Rubik_600SemiBold_Italic,
-    // Rubik_700Bold_Italic,
-    // Rubik_800ExtraBold_Italic,
-    // Rubik_900Black_Italic,
   });
 
   return (
-    <>
+    <Provider store={store}>
       <StatusBar style="dark" />
       {isLoaded && <BaseNavigator />}
-    </>
+    </Provider>
   );
 }
