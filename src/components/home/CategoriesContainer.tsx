@@ -19,7 +19,6 @@ const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
 
   useEffect(() => {
     if (reduxCategories) {
-      console.log("aaaaaa", reduxCategories);
       setCategories(reduxCategories);
     }
   }, [reduxCategories]);

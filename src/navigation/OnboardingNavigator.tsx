@@ -15,12 +15,12 @@ const OnboardingNavigator: React.FC = () => {
       <Stack.Screen
         name={OnboardingScreenNames.ONBOARDING_ONE}
         component={OnboardingOne}
-        options={{ title: "Onboarding 1" }}
+        options={{ title: "Onboarding 1", gestureEnabled: false }}
       />
       <Stack.Screen
         name={OnboardingScreenNames.ONBOARDING_TWO}
         component={OnboardingTwo}
-        options={{ title: "Onboarding 2" }}
+        options={{ title: "Onboarding 2", gestureEnabled: false }}
       />
     </Stack.Navigator>
   );

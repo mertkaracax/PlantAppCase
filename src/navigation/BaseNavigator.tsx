@@ -58,13 +58,14 @@ const BaseNavigator = () => {
         <Stack.Screen
           name="Onboarding"
           component={OnboardingNavigator}
-          options={{ title: "Onboarding" }}
+          options={{ title: "Onboarding", gestureEnabled: false }}
         />
         <Stack.Screen
           name="Paywall"
           component={Paywall}
           options={{
             title: "Paywall",
+            gestureEnabled: false,
           }}
         />
         <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
