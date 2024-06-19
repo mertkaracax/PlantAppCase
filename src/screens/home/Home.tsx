@@ -15,11 +15,7 @@ import { Font, FontSize } from "@src/style/fonts";
 import Inbox from "@src/components/home/Inbox";
 import QuestionContainer from "@src/components/home/QuestionContainer";
 import CategoriesContainer from "@src/components/home/CategoriesContainer";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import {
-  completeOnboarding,
-  setOnboardingState,
-} from "@src/store/onboardingSlice";
+import { completeOnboarding } from "@src/store/onboardingSlice";
 import { useDispatch } from "react-redux";
 
 const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {

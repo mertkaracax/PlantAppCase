@@ -1,16 +1,8 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  ImageBackground,
-  Dimensions,
-  ImageBackgroundBase,
-} from "react-native";
+import { View, Text, StyleSheet, Image, ImageBackground } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { OnboardingScreenNames, OnboardingScreenProps } from "../types";
-import { Font, LetterSpace, LineHeight } from "@src/style/fonts";
+import { Font, LetterSpace } from "@src/style/fonts";
 import { FontStyles } from "@src/style/general";
 import Header from "@src/components/onboarding/Header";
 import { SCREEN, ch, cw } from "@src/style/dimensions";

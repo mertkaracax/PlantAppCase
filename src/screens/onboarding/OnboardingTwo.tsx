@@ -77,7 +77,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     right: cw(80),
     top: ch(95),
-    // resizeMode: "contain",
   },
   artwork: {
     position: "absolute",
