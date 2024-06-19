@@ -1,4 +1,4 @@
-export interface OnboardingScreenProps {
+export interface RouteProps {
   navigation?: any;
   route?: any;
 }
