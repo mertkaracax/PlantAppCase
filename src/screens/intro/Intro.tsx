@@ -7,7 +7,7 @@ import Header from "@src/components/UI/Header";
 import { Font } from "@src/style/fonts";
 import { IMAGES } from "@src/assets/images";
 import Footer from "@src/components/UI/Footer";
-import FlowButton from "@src/components/UI/FlowButton";
+import OnboardingButton from "@src/components/onboarding/OnboardingButton";
 import { FontStyles } from "@src/style/general";
 
 const Intro: React.FC<OnboardingScreenProps> = ({ route, navigation }) => {
@@ -32,7 +32,7 @@ const Intro: React.FC<OnboardingScreenProps> = ({ route, navigation }) => {
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={IMAGES.onboarding_1.background} />
         </View>
-        <FlowButton
+        <OnboardingButton
           style={{ height: ch(56) }}
           title="Get Started"
           onPress={() => {

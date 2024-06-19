@@ -37,3 +37,5 @@ const generalFontStyles = StyleSheet.create({
 });
 
 export { generalFontStyles as FontStyles };
+
+export const corouselWidth = <number>cw(492);

@@ -5,11 +5,6 @@ import OfferCheckbox from "./OfferCheckbox";
 import { Font, FontSize } from "@src/style/fonts";
 import { Color } from "@src/style/colors";
 import { LinearGradient } from "expo-linear-gradient";
-// colors={
-//             isActive
-//               ? ['rgba(40, 175, 110, 0.17)', 'rgba(40, 175, 110, 0)']
-//               : ['rgba(255, 255, 255, 0.05)', 'rgba(255, 255, 255, 0.05)']
-//           }
 
 type PaymentOptionpProps = {
   name: string;
@@ -53,7 +48,7 @@ const PaymentOption: React.FC<PaymentOptionpProps> = ({
               position: "relative",
             }}
           >
-            {isActive && name === "yearly" && (
+            {name === "yearly" && (
               <View
                 style={{
                   position: "absolute",

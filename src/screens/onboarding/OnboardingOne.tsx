@@ -7,7 +7,7 @@ import { FontStyles } from "@src/style/general";
 import Header from "@src/components/UI/Header";
 import { SCREEN, ch, cw } from "@src/style/dimensions";
 import { IMAGES } from "@src/assets/images";
-import FlowButton from "@src/components/UI/FlowButton";
+import OnboardingButton from "@src/components/onboarding/OnboardingButton";
 import PaginationIndicator from "@src/components/onboarding/PaginationIndicator";
 import { useBackBlocker } from "@src/hooks/navigationHooks";
 
@@ -47,7 +47,7 @@ const OnboardingOne: React.FC<OnboardingScreenProps> = ({
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={IMAGES.onboarding_2.background} />
         </View>
-        <FlowButton
+        <OnboardingButton
           style={{ height: ch(56) }}
           title="Continue"
           onPress={() => {

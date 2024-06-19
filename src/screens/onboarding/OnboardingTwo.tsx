@@ -7,7 +7,7 @@ import { FontStyles } from "@src/style/general";
 import Header from "@src/components/UI/Header";
 import { ch, cw } from "@src/style/dimensions";
 import { IMAGES } from "@src/assets/images";
-import FlowButton from "@src/components/UI/FlowButton";
+import OnboardingButton from "@src/components/onboarding/OnboardingButton";
 import MaskedView from "@react-native-masked-view/masked-view";
 import { LinearGradient } from "expo-linear-gradient";
 import PaginationIndicator from "@src/components/onboarding/PaginationIndicator";
@@ -62,7 +62,7 @@ const OnboardingTwo: React.FC<OnboardingScreenProps> = ({ navigation }) => {
           <Image style={styles.image} source={IMAGES.onboarding_3.background} />
         </MaskedView>
         <Image style={styles.artwork} source={IMAGES.onboarding_3.artwork} />
-        <FlowButton
+        <OnboardingButton
           style={{ height: ch(56) }}
           title="Continue"
           onPress={continueHandler}

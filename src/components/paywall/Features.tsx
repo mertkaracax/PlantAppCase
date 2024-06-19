@@ -8,7 +8,7 @@ import {
   Easing,
   ScrollView,
 } from "react-native";
-import { corouselWidth } from "./util";
+import { corouselWidth } from "@src/style/general";
 
 interface FeaturesProps {
   children: ReactNode;
