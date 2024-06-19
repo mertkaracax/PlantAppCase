@@ -13,7 +13,7 @@ import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { Color } from "@src/style/colors";
 import { Font, FontSize } from "@src/style/fonts";
 
-const TabBar: React.FC<BottomTabBarProps> = () => {
+const CustomTabBar: React.FC<BottomTabBarProps> = () => {
   const handleUnexpectedEvents = () => {
     Alert.alert("This screen has not been designed yet.");
   };
@@ -65,7 +65,7 @@ const TabBar: React.FC<BottomTabBarProps> = () => {
   );
 };
 
-export default TabBar;
+export default CustomTabBar;
 
 const styles = StyleSheet.create({
   tabBar: {

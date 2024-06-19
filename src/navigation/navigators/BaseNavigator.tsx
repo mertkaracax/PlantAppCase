@@ -9,18 +9,17 @@ import Paywall from "@src/screens/paywall/Paywall";
 import OnboardingNavigator from "./OnboardingNavigator";
 import Intro from "@src/screens/intro/Intro";
 import { RootState } from "@src/store/redux";
-import {
-  setOnboardingState,
-  completeOnboarding,
-} from "@src/store/onboardingSlice";
+import { setOnboardingState } from "@src/store/onboardingSlice";
 import { Color } from "@src/style/colors";
 
 const BaseNavigator = () => {
   const Stack = createNativeStackNavigator();
+
   const dispatch = useDispatch();
   const onboardingCompleted = useSelector(
     (state: RootState) => state.onboarding.completed
   );
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import BaseNavigator from "@src/navigation/BaseNavigator";
+import BaseNavigator from "@src/navigation/navigators/BaseNavigator";
 import { StatusBar } from "expo-status-bar";
 import {
   useFonts,

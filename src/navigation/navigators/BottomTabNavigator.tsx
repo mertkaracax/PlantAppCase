@@ -1,13 +1,10 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "@src/screens/home/Home";
-import { Image, StyleSheet, View } from "react-native";
-import { ch, cw } from "@src/style/dimensions";
-import { ICONS } from "@src/assets/icons";
-import Diagnose from "@src/screens/home/Diagnose";
-import MyGarden from "@src/screens/home/MyGarden";
-import Profile from "@src/screens/home/Profile";
-import TabBar from "./TabBar";
+import Home from "@src/screens/main/Home";
+import Diagnose from "@src/screens/main/Diagnose";
+import MyGarden from "@src/screens/main/MyGarden";
+import Profile from "@src/screens/main/Profile";
+import CustomTabBar from "../CustomTabBar";
 
 const BottomTabNavigator: React.FC = () => {
   const Tab = createBottomTabNavigator();
@@ -16,7 +13,7 @@ const BottomTabNavigator: React.FC = () => {
       screenOptions={({ route }) => ({
         headerShown: false,
       })}
-      tabBar={(props) => <TabBar {...props} />}
+      tabBar={(props) => <CustomTabBar {...props} />}
     >
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Diagnose" component={Diagnose} />

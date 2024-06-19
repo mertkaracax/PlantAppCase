@@ -1,5 +1,5 @@
 import OnboardingOne from "./onboarding/OnboardingOne";
 import OnboardingTwo from "./onboarding/OnboardingTwo";
-import Home from "./home/Home";
+import Home from "./main/Home";
 
 export { Home, OnboardingOne, OnboardingTwo };
