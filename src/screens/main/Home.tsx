@@ -17,6 +17,7 @@ import QuestionsContainer from "@src/components/home/QuestionsContainer";
 import CategoriesContainer from "@src/components/home/CategoriesContainer";
 import { completeOnboarding } from "@src/store/onboardingSlice";
 import { useDispatch } from "react-redux";
+import { ICONS } from "@src/assets/icons";
 
 const Home: React.FC<RouteProps> = ({ navigation, route }) => {
   const [filter, onChangeFilter] = useState("");
@@ -58,10 +59,7 @@ const Home: React.FC<RouteProps> = ({ navigation, route }) => {
       <View style={styles.headerContainer}>
         <Header marginTop={ch(50)} title={title} subtitle={subtitle} />
         <View style={styles.textInputContainer}>
-          <Image
-            style={styles.searchIcon}
-            source={require("@src/assets/icons/Search.png")}
-          />
+          <Image style={styles.searchIcon} source={ICONS.search} />
           <TextInput
             placeholder="Search for plants"
             onChangeText={onChangeFilter}

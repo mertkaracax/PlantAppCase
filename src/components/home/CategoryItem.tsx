@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     height: ch(152),
     borderRadius: 12,
     borderWidth: 0.5,
-    borderColor: "#3C3C431A",
+    borderColor: Color.CategoryItemBorderColor,
     marginBottom: ch(16),
     backgroundColor: "#F4F6F6",
   },

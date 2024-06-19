@@ -12,6 +12,7 @@ import MaskedView from "@react-native-masked-view/masked-view";
 import { LinearGradient } from "expo-linear-gradient";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Font, FontSize, LetterSpace } from "@src/style/fonts";
+import { ICONS } from "@src/assets/icons";
 
 const Inbox = () => {
   return (
@@ -21,10 +22,7 @@ const Inbox = () => {
         AsyncStorage.setItem("onboardingCompleted", JSON.stringify(false));
       }}
     >
-      <Image
-        style={styles.image}
-        source={require("@src/assets/icons/Mail.png")}
-      />
+      <Image style={styles.image} source={ICONS.mail} />
       <View style={styles.textContainer}>
         <MaskedView
           style={{ flex: 1 }}
@@ -57,10 +55,7 @@ const Inbox = () => {
           />
         </MaskedView>
       </View>
-      <Image
-        style={styles.arrowRight}
-        source={require("@src/assets/icons/PremiumArrowRight.png")}
-      />
+      <Image style={styles.arrowRight} source={ICONS.premiumArrowRight} />
     </TouchableOpacity>
   );
 };

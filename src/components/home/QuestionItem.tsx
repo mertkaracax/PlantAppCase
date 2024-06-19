@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     height: ch(164),
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#FFFFFF1A",
+    borderColor: Color.QuestionItemBorderColor,
     marginRight: cw(10),
   },
   image: {

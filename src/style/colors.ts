@@ -8,4 +8,8 @@ export enum Color {
   OnboardingButtonShadow = "#28AF6EA0",
   PaywallButtonBg = "#28AF6E",
   FooterText = "#597165B2",
+  CategoryItemBorderColor = "#3C3C431A",
+  CategoryItemBackgroundColor = "#F4F6F6",
+  FeatureItemBackgroundColor = "#FFFFFF14",
+  QuestionItemBorderColor = "#FFFFFF1A",
 }

@@ -2,6 +2,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { ch, cw } from "@src/style/dimensions";
 import { Font, FontSize } from "@src/style/fonts";
+import { Color } from "@src/style/colors";
 
 type FeatureItemProps = {
   image: any;
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     padding: ch(16),
     display: "flex",
     justifyContent: "space-between",
-    backgroundColor: "#FFFFFF14",
+    backgroundColor: Color.FeatureItemBackgroundColor,
     borderRadius: 14,
     marginRight: cw(8),
   },

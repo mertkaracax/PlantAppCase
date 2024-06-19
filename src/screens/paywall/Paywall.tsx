@@ -20,6 +20,7 @@ import Features from "@src/components/paywall/Features";
 import FeatureItem from "@src/components/paywall/FeatureItem";
 import PaymentContainer from "@src/components/paywall/PaymentContainer";
 import { useBackBlocker } from "@src/hooks/navigationHooks";
+import { ICONS } from "@src/assets/icons";
 
 const Paywall: React.FC<RouteProps> = ({ navigation, route }) => {
   useBackBlocker();
@@ -72,10 +73,7 @@ const Paywall: React.FC<RouteProps> = ({ navigation, route }) => {
             navigation.navigate("BottomTab", { vanishMode: "slideDown" });
           }}
         >
-          <Image
-            style={{ height: ch(8), width: ch(8) }}
-            source={require("@src/assets/icons/Close.png")}
-          />
+          <Image style={{ height: ch(8), width: ch(8) }} source={ICONS.close} />
         </TouchableOpacity>
         <Header
           top={ch(264)}
@@ -85,17 +83,13 @@ const Paywall: React.FC<RouteProps> = ({ navigation, route }) => {
         />
         <Features>
           <FeatureItem
-            image={require("@src/assets/icons/Scanner.png")}
+            image={ICONS.scanner}
             title="Unlimited"
             subtitle="Plant Identify"
           />
+          <FeatureItem image={ICONS.speed} title="Faster" subtitle="Process" />
           <FeatureItem
-            image={require("@src/assets/icons/Speed.png")}
-            title="Faster"
-            subtitle="Process"
-          />
-          <FeatureItem
-            image={require("@src/assets/icons/Detailed.png")}
+            image={ICONS.detailed}
             title="Detailed"
             subtitle="Plant care"
           />
