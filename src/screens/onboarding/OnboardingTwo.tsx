@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Image, ImageBackground } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { OnboardingScreenNames, OnboardingScreenProps } from "../types";
-import { Font, LetterSpace } from "@src/style/fonts";
+import { Font, LetterSpace, LineHeight } from "@src/style/fonts";
 import { FontStyles } from "@src/style/general";
 import Header from "@src/components/onboarding/Header";
 import { ch, cw } from "@src/style/dimensions";
@@ -19,7 +19,11 @@ const OnboardingTwo: React.FC<OnboardingScreenProps> = ({ navigation }) => {
     <Text
       style={[
         FontStyles.headerTitle,
-        { fontFamily: Font.Medium, letterSpacing: LetterSpace.TIGHT },
+        {
+          fontFamily: Font.Medium,
+          letterSpacing: LetterSpace.TIGHT,
+          lineHeight: LineHeight.LINE33_18,
+        },
       ]}
     >
       Get plant <Text style={{ fontFamily: Font.ExtraBold }}>care guides</Text>
@@ -38,8 +42,10 @@ const OnboardingTwo: React.FC<OnboardingScreenProps> = ({ navigation }) => {
       resizeMode="contain"
     >
       <SafeAreaView style={{ flex: 1 }}>
-        <Header title={headerTitle} height={ch(49)} />
-        <Image source={IMAGES.onboarding_3.brush} style={styles.brush} />
+        <Header title={headerTitle} height={ch(49)} width={cw(283)}>
+          <Image source={IMAGES.onboarding_3.brush} style={styles.brush} />
+        </Header>
+
         <MaskedView
           maskElement={
             <View style={styles.maskContainer}>
@@ -75,8 +81,8 @@ const styles = StyleSheet.create({
     width: cw(152.13),
     height: ch(13),
     position: "absolute",
-    right: cw(80),
-    top: ch(95),
+    right: cw(6),
+    bottom: ch(0),
   },
   artwork: {
     position: "absolute",
@@ -91,7 +97,7 @@ const styles = StyleSheet.create({
     height: ch(540),
     width: cw(261),
     alignSelf: "center",
-    marginTop: ch(79),
+    marginTop: ch(78),
     position: "relative",
     resizeMode: "contain",
   },

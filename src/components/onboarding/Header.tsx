@@ -9,20 +9,21 @@ import { FontStyles } from "@src/style/general";
 const Header: React.FC<HeaderProps> = ({
   title,
   subtitle,
-  width = "auto",
+  width = cw(315),
   height = "auto",
   top,
   left,
   marginTop = ch(12),
   marginBottom,
   maxWidth,
+  children,
 }) => {
   return (
     <View
       style={[
         styles.headerContainer,
         {
-          width: cw(315),
+          width: width,
           maxWidth: maxWidth,
           height: height,
           top: top,
@@ -38,6 +39,7 @@ const Header: React.FC<HeaderProps> = ({
       ) : (
         React.isValidElement(subtitle) && subtitle
       )}
+      {children}
     </View>
   );
 };

@@ -11,4 +11,5 @@ export type HeaderProps = {
   marginTop?: number | "auto" | DimensionValue;
   marginBottom?: number | "auto" | DimensionValue;
   maxWidth?: number | "auto" | DimensionValue;
+  children?: ReactNode;
 };
