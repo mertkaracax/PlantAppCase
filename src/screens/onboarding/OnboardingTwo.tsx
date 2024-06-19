@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image, ImageBackground } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { OnboardingScreenNames, OnboardingScreenProps } from "../types";
+import { OnboardingScreenNames, RouteProps } from "../types";
 import { Font, LetterSpace, LineHeight } from "@src/style/fonts";
 import { FontStyles } from "@src/style/general";
 import Header from "@src/components/UI/Header";
@@ -13,7 +13,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import PaginationIndicator from "@src/components/onboarding/PaginationIndicator";
 import { useBackBlocker } from "@src/hooks/navigationHooks";
 
-const OnboardingTwo: React.FC<OnboardingScreenProps> = ({ navigation }) => {
+const OnboardingTwo: React.FC<RouteProps> = ({ navigation }) => {
   useBackBlocker();
   const headerTitle = (
     <Text

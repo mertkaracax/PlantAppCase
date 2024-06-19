@@ -8,8 +8,8 @@ import {
   Image,
   Platform,
 } from "react-native";
-import React from "react";
-import { OnboardingScreenProps } from "../types";
+import React, { useMemo } from "react";
+import { RouteProps } from "../types";
 import { IMAGES } from "@src/assets/images";
 import { ch, cw } from "@src/style/dimensions";
 import { StatusBar } from "expo-status-bar";
@@ -21,26 +21,32 @@ import FeatureItem from "@src/components/paywall/FeatureItem";
 import PaymentContainer from "@src/components/paywall/PaymentContainer";
 import { useBackBlocker } from "@src/hooks/navigationHooks";
 
-const Paywall: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
+const Paywall: React.FC<RouteProps> = ({ navigation, route }) => {
   useBackBlocker();
-  const headerTitle = (
-    <Text style={FontStyles.paywallHeaderTitle}>
-      <Text
-        style={{
-          fontFamily:
-            Platform.OS === "ios" ? Font.VisbyCF_ExtraBold : Font.ExtraBold,
-          color: "white",
-          fontSize: FontSize.SIZE30,
-        }}
-      >
-        PlantApp
-      </Text>{" "}
-      Premium
-    </Text>
+  const headerTitle = useMemo(
+    () => (
+      <Text style={FontStyles.paywallHeaderTitle}>
+        <Text
+          style={{
+            fontFamily:
+              Platform.OS === "ios" ? Font.VisbyCF_ExtraBold : Font.ExtraBold,
+            color: "white",
+            fontSize: FontSize.SIZE30,
+          }}
+        >
+          PlantApp
+        </Text>{" "}
+        Premium
+      </Text>
+    ),
+    []
   );
 
-  const headerSubtitle = (
-    <Text style={[FontStyles.paywallHeaderSubtitle]}>Access All Features</Text>
+  const headerSubtitle = useMemo(
+    () => (
+      <Text style={FontStyles.paywallHeaderSubtitle}>Access All Features</Text>
+    ),
+    []
   );
 
   return (

@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import React, { useEffect, useState } from "react";
-import { OnboardingScreenProps } from "../types";
+import { RouteProps } from "../types";
 import Header from "@src/components/UI/Header";
 import { StatusBar } from "expo-status-bar";
 import { ch, cw } from "@src/style/dimensions";
@@ -18,7 +18,7 @@ import CategoriesContainer from "@src/components/home/CategoriesContainer";
 import { completeOnboarding } from "@src/store/onboardingSlice";
 import { useDispatch } from "react-redux";
 
-const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
+const Home: React.FC<RouteProps> = ({ navigation, route }) => {
   const dispatch = useDispatch();
   const completeOnboardingFlow = () => {
     dispatch(completeOnboarding());

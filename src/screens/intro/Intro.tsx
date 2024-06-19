@@ -1,7 +1,7 @@
 import { Text, StyleSheet, Image, View, ImageBackground } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { OnboardingScreenProps } from "../types";
+import { RouteProps } from "../types";
 import { ch, cw } from "@src/style/dimensions";
 import Header from "@src/components/UI/Header";
 import { Font } from "@src/style/fonts";
@@ -10,7 +10,7 @@ import Footer from "@src/components/UI/Footer";
 import OnboardingButton from "@src/components/onboarding/OnboardingButton";
 import { FontStyles } from "@src/style/general";
 
-const Intro: React.FC<OnboardingScreenProps> = ({ route, navigation }) => {
+const Intro: React.FC<RouteProps> = ({ route, navigation }) => {
   const headerTitle = (
     <Text style={[FontStyles.headerTitle, { maxWidth: cw(375) }]}>
       Welcome to <Text style={{ fontFamily: Font.SemiBold }}>PlantApp</Text>
