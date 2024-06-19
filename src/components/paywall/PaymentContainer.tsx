@@ -1,14 +1,14 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import React, { PropsWithChildren, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { ch, cw } from "@src/style/dimensions";
 import PaymentOption from "./PaymentOption";
 
 const PaymentContainer: React.FC = () => {
   const [plan, setPlan] = useState("yearly");
 
-  const changePlanHandler = (plan: string) => {
-    setPlan(plan);
-  };
+  const changePlanHandler = useCallback((newPlan: string) => {
+    setPlan(newPlan);
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -26,7 +26,7 @@ const PaymentContainer: React.FC = () => {
         isActive={plan === "yearly"}
         onPress={changePlanHandler}
       />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.paywallButton}>
         <View>
           <Text style={{ fontSize: 16, color: "white" }}>
             {plan === "yearly" ? "Try free for 3 days" : "Continue"}
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     // position: "absolute",
     marginTop: ch(19),
   },
-  button: {
+  paywallButton: {
     height: ch(52),
     width: cw(327),
     backgroundColor: "#28AF6E",

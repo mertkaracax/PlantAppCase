@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { ch, cw } from "@src/style/dimensions";
 import { Font, FontSize } from "@src/style/fonts";
 import { Category } from "@src/models/category";
@@ -42,7 +42,7 @@ const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
   );
 };
 
-export default CategoriesContainer;
+export default memo(CategoriesContainer);
 
 const styles = StyleSheet.create({
   container: {

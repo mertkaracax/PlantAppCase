@@ -1,5 +1,5 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { ch, cw } from "@src/style/dimensions";
 import { Font, FontSize } from "@src/style/fonts";
 import { get } from "@src/api/api";
@@ -31,7 +31,7 @@ const QuestionsContainer = () => {
   );
 };
 
-export default QuestionsContainer;
+export default memo(QuestionsContainer);
 
 const styles = StyleSheet.create({
   container: {

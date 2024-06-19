@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { memo } from "react";
 import { HeaderProps } from "../onboarding/types";
 import { ch, cw } from "@src/style/dimensions";
 import { FontStyles } from "@src/style/general";
@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({
   );
 };
 
-export default Header;
+export default memo(Header);
 
 const styles = StyleSheet.create({
   headerContainer: {

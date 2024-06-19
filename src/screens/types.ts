@@ -3,11 +3,6 @@ export interface RouteProps {
   route?: any;
 }
 
-export interface SwiperProps {
-  navigation?: any;
-  route?: any;
-}
-
 export enum NavigatorNames {
   OnboardingNavigator = "Onboarding",
   BottomTabNavigator = "BottomTab",

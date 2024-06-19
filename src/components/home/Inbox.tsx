@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import React from "react";
+import React, { memo } from "react";
 import { ch, cw } from "@src/style/dimensions";
 import MaskedView from "@react-native-masked-view/masked-view";
 import { LinearGradient } from "expo-linear-gradient";
@@ -65,7 +65,7 @@ const Inbox = () => {
   );
 };
 
-export default Inbox;
+export default memo(Inbox);
 
 const styles = StyleSheet.create({
   container: {

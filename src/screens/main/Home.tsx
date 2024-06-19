@@ -6,7 +6,7 @@ import {
   StyleSheet,
   ScrollView,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useMemo } from "react";
 import { RouteProps } from "../types";
 import Header from "@src/components/UI/Header";
 import { StatusBar } from "expo-status-bar";
@@ -19,100 +19,53 @@ import { completeOnboarding } from "@src/store/onboardingSlice";
 import { useDispatch } from "react-redux";
 
 const Home: React.FC<RouteProps> = ({ navigation, route }) => {
+  const [filter, onChangeFilter] = useState("");
+
   const dispatch = useDispatch();
-  const completeOnboardingFlow = () => {
+
+  const completeOnboardingFlow = useCallback(() => {
     dispatch(completeOnboarding());
-  };
+  }, [dispatch]);
 
   useEffect(() => {
     completeOnboardingFlow();
   }, []);
 
-  const [filter, onChangeFilter] = useState("");
-  const title = (
-    <Text
-      style={{
-        fontFamily: Font.Regular,
-        fontSize: FontSize.SIZE16,
-        lineHeight: 18.96,
-      }}
-    >
-      Hi, plant lover!
-    </Text>
+  const title = useMemo(
+    () => <Text style={styles.titleText}>Hi, plant lover!</Text>,
+    []
   );
 
-  const subtitle = (
-    <Text
-      style={{
-        color: "#13231B",
-        fontSize: FontSize.SIZE24,
-        fontFamily: Font.Medium,
-      }}
-    >
-      Good Afternoon! ⛅
-    </Text>
+  const subtitle = useMemo(
+    () => <Text style={styles.subtitleText}>Good Afternoon! ⛅</Text>,
+    []
   );
+
   return (
     <>
       <StatusBar style="dark" />
-      <View
-        style={{
-          height: ch(175),
-          width: "100%",
-          position: "relative",
-        }}
-      >
+      <View style={styles.headerContainer}>
         <Header marginTop={ch(50)} title={title} subtitle={subtitle} />
         <View style={styles.textInputContainer}>
           <Image
-            style={{
-              height: cw(15),
-              width: cw(15),
-              marginRight: cw(12),
-            }}
+            style={styles.searchIcon}
             source={require("@src/assets/icons/Search.png")}
           />
           <TextInput
             placeholder="Search for plants"
             onChangeText={onChangeFilter}
-            style={{
-              fontFamily: Font.Regular,
-              fontSize: FontSize.SIZE15_5,
-              lineHeight: 18.37,
-              letterSpacing: 0.07,
-              flex: 1,
-            }}
+            style={styles.textInput}
           />
         </View>
         <Image
-          style={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            width: cw(110),
-            height: ch(80),
-            opacity: 0.54,
-          }}
+          style={styles.leftLeafImage}
           source={require("@src/assets/images/home/LeftLeaf.png")}
         />
         <Image
-          style={{
-            position: "absolute",
-            right: 0,
-            bottom: 0,
-            width: cw(110),
-            height: ch(80),
-            opacity: 0.54,
-          }}
+          style={styles.rightLeafImage}
           source={require("@src/assets/images/home/RightLeaf.png")}
         />
-        <View
-          style={{
-            backgroundColor: "white",
-            height: ch(553),
-            marginTop: ch(24),
-          }}
-        >
+        <View style={styles.contentContainer}>
           <ScrollView>
             <Inbox />
             <QuestionsContainer />
@@ -125,6 +78,11 @@ const Home: React.FC<RouteProps> = ({ navigation, route }) => {
 };
 
 const styles = StyleSheet.create({
+  headerContainer: {
+    height: ch(175),
+    width: "100%",
+    position: "relative",
+  },
   textInputContainer: {
     width: cw(327),
     height: ch(44),
@@ -139,6 +97,49 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingLeft: cw(12),
   },
+  searchIcon: {
+    height: cw(15),
+    width: cw(15),
+    marginRight: cw(12),
+  },
+  textInput: {
+    fontFamily: Font.Regular,
+    fontSize: FontSize.SIZE15_5,
+    lineHeight: 18.37,
+    letterSpacing: 0.07,
+    flex: 1,
+  },
+  leftLeafImage: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    width: cw(110),
+    height: ch(80),
+    opacity: 0.54,
+  },
+  rightLeafImage: {
+    position: "absolute",
+    right: 0,
+    bottom: 0,
+    width: cw(110),
+    height: ch(80),
+    opacity: 0.54,
+  },
+  contentContainer: {
+    backgroundColor: "white",
+    height: ch(553),
+    marginTop: ch(24),
+  },
+  titleText: {
+    fontFamily: Font.Regular,
+    fontSize: FontSize.SIZE16,
+    lineHeight: 18.96,
+  },
+  subtitleText: {
+    color: "#13231B",
+    fontSize: FontSize.SIZE24,
+    fontFamily: Font.Medium,
+  },
 });
 
-export default Home;
+export default React.memo(Home);
