@@ -19,7 +19,12 @@ const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
   useEffect(() => {
     const getCategories = async () => {
       const response = await get(Endpoints.GET_CATEGORIES);
-      setCategories(response.data);
+
+      // The categories were sorted in descending order based on their IDs to ensure that newly added ones appear at the top.
+      const sortedCategories: Array<Category> = response.data.sort(
+        (current: Category, next: Category) => next.id - current.id
+      );
+      setCategories(sortedCategories);
     };
     getCategories();
   }, []);

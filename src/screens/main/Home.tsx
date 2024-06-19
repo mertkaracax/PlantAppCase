@@ -36,8 +36,19 @@ const Home: React.FC<RouteProps> = ({ navigation, route }) => {
     []
   );
 
+  const getGreeting = useCallback(() => {
+    const hour = new Date().getHours();
+    if (hour < 12) {
+      return "Good Morning! ☀️";
+    } else if (hour < 18) {
+      return "Good Afternoon! ⛅";
+    } else {
+      return "Good Evening! 🌙";
+    }
+  }, []);
+
   const subtitle = useMemo(
-    () => <Text style={styles.subtitleText}>Good Afternoon! ⛅</Text>,
+    () => <Text style={styles.subtitleText}>{getGreeting()}</Text>,
     []
   );
 
