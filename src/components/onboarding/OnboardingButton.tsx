@@ -7,7 +7,7 @@ import {
   Animated,
 } from "react-native";
 import { ch, cw } from "@src/style/dimensions";
-import { Font, FontSize } from "@src/style/fonts";
+import { Font, FontSize, LetterSpace } from "@src/style/fonts";
 import { Color } from "@src/style/colors";
 
 type FlowButtonProps = {
@@ -62,7 +62,14 @@ const FlowButton: React.FC<FlowButtonProps> = ({ title, style, onPress }) => {
         ]}
         onPress={onPress}
       >
-        <Text style={styles.title}>{title}</Text>
+        <Text
+          style={[
+            styles.title,
+            { fontFamily: Platform.OS === "ios" ? Font.SF_PRO : Font.Regular },
+          ]}
+        >
+          {title}
+        </Text>
       </TouchableOpacity>
       <Animated.View
         style={[
@@ -95,7 +102,8 @@ const styles = StyleSheet.create({
   title: {
     color: "white",
     fontSize: FontSize.SIZE15,
-    fontFamily: Font.Regular,
+    fontWeight: "700",
+    letterSpacing: LetterSpace.TIGHT_024,
   },
   backgroundButton: {
     position: "absolute",

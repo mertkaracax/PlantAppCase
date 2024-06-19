@@ -11,7 +11,7 @@ import { ch, cw } from "@src/style/dimensions";
 import { ICONS } from "@src/assets/icons";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { Color } from "@src/style/colors";
-import { Font, FontSize } from "@src/style/fonts";
+import { Font, FontSize, LetterSpace } from "@src/style/fonts";
 
 const CustomTabBar: React.FC<BottomTabBarProps> = () => {
   const handleUnexpectedEvents = () => {
@@ -91,5 +91,6 @@ const styles = StyleSheet.create({
     fontSize: FontSize.SIZE10,
     fontFamily: Font.Regular,
     color: "#979798",
+    letterSpacing: LetterSpace.TIGHT_024,
   },
 });

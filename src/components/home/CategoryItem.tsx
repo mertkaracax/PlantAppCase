@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { ch, cw } from "@src/style/dimensions";
-import { Font, FontSize } from "@src/style/fonts";
+import { Font, FontSize, LetterSpace } from "@src/style/fonts";
 import { Color } from "@src/style/colors";
 import { Category } from "@src/models/category";
 
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     height: ch(64),
     maxWidth: cw(85),
     fontSize: FontSize.SIZE16,
-    letterSpacing: -0.32,
+    letterSpacing: LetterSpace.TIGHT_032,
     lineHeight: 21,
     fontFamily: Font.Medium,
     color: Color.HeaderText,

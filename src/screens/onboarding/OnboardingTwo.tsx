@@ -21,7 +21,7 @@ const OnboardingTwo: React.FC<OnboardingScreenProps> = ({ navigation }) => {
         FontStyles.headerTitle,
         {
           fontFamily: Font.Medium,
-          letterSpacing: LetterSpace.TIGHT,
+          letterSpacing: LetterSpace.TIGHT_1,
           lineHeight: LineHeight.LINE33_18,
         },
       ]}

@@ -23,7 +23,7 @@ const OnboardingOne: React.FC<OnboardingScreenProps> = ({
         FontStyles.headerTitle,
         {
           fontFamily: Font.Medium,
-          letterSpacing: LetterSpace.TIGHT,
+          letterSpacing: LetterSpace.TIGHT_1,
           lineHeight: LineHeight.LINE33_18,
         },
       ]}

@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { ch, cw } from "@src/style/dimensions";
 import { Question } from "@src/models/question";
-import { Font, FontSize } from "@src/style/fonts";
+import { Font, FontSize, LetterSpace } from "@src/style/fonts";
 import { Color } from "@src/style/colors";
 
 type QuestionItemParams = {
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 1,
     borderColor: "#FFFFFF1A",
-    marginRight: cw(10), // Öğeler arasında boşluk oluşturmak için
+    marginRight: cw(10),
   },
   image: {
     flex: 1,
@@ -57,5 +57,6 @@ const styles = StyleSheet.create({
     fontSize: FontSize.SIZE15,
     fontFamily: Font.Medium,
     color: Color.WHITE,
+    letterSpacing: LetterSpace.TIGHT_024,
   },
 });

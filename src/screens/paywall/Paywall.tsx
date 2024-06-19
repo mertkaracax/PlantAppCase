@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
+  Platform,
 } from "react-native";
 import React from "react";
 import { OnboardingScreenProps } from "../types";
@@ -24,7 +25,14 @@ const Paywall: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
   useBackBlocker();
   const headerTitle = (
     <Text style={FontStyles.paywallHeaderTitle}>
-      <Text style={{ fontFamily: Font.ExtraBold, color: "white" }}>
+      <Text
+        style={{
+          fontFamily:
+            Platform.OS === "ios" ? Font.VisbyCF_ExtraBold : Font.ExtraBold,
+          color: "white",
+          fontSize: FontSize.SIZE30,
+        }}
+      >
         PlantApp
       </Text>{" "}
       Premium

@@ -8,6 +8,9 @@ export enum Font {
   Bold = "Rubik_700Bold",
   ExtraBold = "Rubik_800ExtraBold",
   Black = "Rubik_900Black",
+  SF_PRO = "SFProText-Regular",
+  VisbyCF = "VisbyCF-Bold",
+  VisbyCF_ExtraBold = "VisbyCF-ExtraBold",
 }
 
 export enum FontSize {
@@ -27,8 +30,11 @@ export enum FontSize {
 }
 
 export enum LetterSpace {
-  TIGHT = <number>cw(-1),
-  NORMAL = <number>cw(0.07),
+  TIGHT_1 = <number>cw(-1),
+  TIGHT_032 = <number>cw(-0.32),
+  TIGHT_024 = <number>cw(-0.24),
+  LOOSE_007 = <number>cw(0.07),
+  EXTRA_LOOSE = <number>cw(1),
 }
 
 export enum DotSize {

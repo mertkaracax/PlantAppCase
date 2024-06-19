@@ -10,7 +10,7 @@ const generalFontStyles = StyleSheet.create({
     color: Color.HeaderText,
     lineHeight: 33.18,
     maxWidth: cw(315),
-    letterSpacing: LetterSpace.NORMAL,
+    letterSpacing: LetterSpace.LOOSE_007,
   },
   paywallHeaderTitle: {
     fontFamily: Font.Light,
@@ -18,7 +18,7 @@ const generalFontStyles = StyleSheet.create({
     color: Color.WHITE,
     lineHeight: 33.18,
     maxWidth: cw(315),
-    letterSpacing: LetterSpace.NORMAL,
+    letterSpacing: LetterSpace.LOOSE_007,
   },
   paywallHeaderSubtitle: {
     fontSize: FontSize.SIZE17,

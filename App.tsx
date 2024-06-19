@@ -23,6 +23,9 @@ export default function App() {
     Rubik_700Bold,
     Rubik_800ExtraBold,
     Rubik_900Black,
+    "SFProText-Regular": require("@src/assets/fonts/SFProText-Regular.ttf"),
+    "VisbyCF-Bold": require("@src/assets/fonts/VisbyCF-Bold.ttf"),
+    "VisbyCF-ExtraBold": require("@src/assets/fonts/VisbyCF-ExtraBold.ttf"),
   });
 
   return (

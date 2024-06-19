@@ -1,9 +1,17 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React from "react";
 import { ch, cw } from "@src/style/dimensions";
 import MaskedView from "@react-native-masked-view/masked-view";
 import { LinearGradient } from "expo-linear-gradient";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Font, FontSize, LetterSpace } from "@src/style/fonts";
 
 const Inbox = () => {
   return (
@@ -22,10 +30,22 @@ const Inbox = () => {
           style={{ flex: 1 }}
           maskElement={
             <View style={styles.maskContainer}>
-              <Text style={[styles.text, { fontSize: 18 }]}>
+              <Text
+                style={[
+                  styles.text,
+                  {
+                    fontSize: FontSize.SIZE16,
+                    fontFamily:
+                      Platform.OS === "ios" ? Font.SF_PRO : Font.Regular,
+                    letterSpacing: LetterSpace.TIGHT_032,
+                  },
+                ]}
+              >
                 FREE Premium Available
               </Text>
-              <Text style={styles.text}>Tap to upgrade your account!</Text>
+              <Text style={[styles.text, { fontSize: FontSize.SIZE13 }]}>
+                Tap to upgrade your account!
+              </Text>
             </View>
           }
         >
