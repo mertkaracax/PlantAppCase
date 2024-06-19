@@ -52,7 +52,7 @@ const OnboardingTwo: React.FC<RouteProps> = ({ navigation }) => {
               <LinearGradient
                 colors={["black", "black", "transparent"]}
                 locations={[0, 0.5, 1]}
-                start={{ x: 0.5, y: 0.6 }}
+                start={{ x: 0.5, y: 0.5 }}
                 end={{ x: 0.5, y: 1 }}
                 style={styles.gradient}
               />

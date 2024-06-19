@@ -114,6 +114,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignSelf: "center",
     borderColor: Color.OnboardingButtonShadow,
-    borderWidth: 2.1,
+    borderWidth: 2.4,
   },
 });
