@@ -12,7 +12,7 @@ import { OnboardingScreenProps } from "../types";
 import { IMAGES } from "@src/assets/images";
 import { ch, cw } from "@src/style/dimensions";
 import { StatusBar } from "expo-status-bar";
-import Header from "@src/components/onboarding/Header";
+import Header from "@src/components/UI/Header";
 import { FontStyles } from "@src/style/general";
 import { Font, FontSize } from "@src/style/fonts";
 import Features from "@src/components/paywall/Features";

@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { OnboardingScreenNames, OnboardingScreenProps } from "../types";
 import { Font, LetterSpace, LineHeight } from "@src/style/fonts";
 import { FontStyles } from "@src/style/general";
-import Header from "@src/components/onboarding/Header";
+import Header from "@src/components/UI/Header";
 import { ch, cw } from "@src/style/dimensions";
 import { IMAGES } from "@src/assets/images";
 import FlowButton from "@src/components/UI/FlowButton";

@@ -8,12 +8,12 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { OnboardingScreenProps } from "../types";
-import Header from "@src/components/onboarding/Header";
+import Header from "@src/components/UI/Header";
 import { StatusBar } from "expo-status-bar";
 import { ch, cw } from "@src/style/dimensions";
 import { Font, FontSize } from "@src/style/fonts";
 import Inbox from "@src/components/home/Inbox";
-import QuestionContainer from "@src/components/home/QuestionContainer";
+import QuestionsContainer from "@src/components/home/QuestionsContainer";
 import CategoriesContainer from "@src/components/home/CategoriesContainer";
 import { completeOnboarding } from "@src/store/onboardingSlice";
 import { useDispatch } from "react-redux";
@@ -115,7 +115,7 @@ const Home: React.FC<OnboardingScreenProps> = ({ navigation, route }) => {
         >
           <ScrollView>
             <Inbox />
-            <QuestionContainer />
+            <QuestionsContainer />
             <CategoriesContainer filter={filter} />
           </ScrollView>
         </View>

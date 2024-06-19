@@ -3,7 +3,7 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { OnboardingScreenProps } from "../types";
 import { ch, cw } from "@src/style/dimensions";
-import Header from "@src/components/onboarding/Header";
+import Header from "@src/components/UI/Header";
 import { Font } from "@src/style/fonts";
 import { IMAGES } from "@src/assets/images";
 import Footer from "@src/components/UI/Footer";

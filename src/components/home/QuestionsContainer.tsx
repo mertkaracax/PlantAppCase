@@ -7,7 +7,7 @@ import { Question } from "@src/models/question";
 import QuestionItem from "./QuestionItem";
 import { Endpoints } from "@src/api/endpoints";
 
-const QuestionContainer = () => {
+const QuestionsContainer = () => {
   const [questions, setQuestions] = useState<Array<Question>>([]);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const QuestionContainer = () => {
   );
 };
 
-export default QuestionContainer;
+export default QuestionsContainer;
 
 const styles = StyleSheet.create({
   container: {
