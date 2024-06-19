@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnboardingOne renders correctly 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      [
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        {
+          "height": undefined,
+          "width": undefined,
+        },
+        undefined,
+      ]
+    }
+  />
+  <SafeAreaView
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <Header
+      height={123.21428571428571}
+      title={
+        <Text
+          numberOfLines={2}
+          style={
+            [
+              {
+                "color": "#13231B",
+                "fontFamily": "Rubik_400Regular",
+                "fontSize": 56.00000000000001,
+                "letterSpacing": 0.14,
+                "lineHeight": 33.18,
+                "maxWidth": 630,
+              },
+              {
+                "fontFamily": "Rubik_500Medium",
+                "letterSpacing": -2,
+                "lineHeight": 54.510000000000005,
+              },
+            ]
+          }
+        >
+          Take a photo to
+           
+          <Text
+            style={
+              {
+                "fontFamily": "Rubik_800ExtraBold",
+              }
+            }
+          >
+            identify 
+            
+
+          </Text>
+           the plant!
+        </Text>
+      }
+    >
+      <Image
+        source="brush.png"
+        style={
+          {
+            "bottom": 41.54785714285714,
+            "height": 19.71428571428571,
+            "position": "absolute",
+            "right": 0,
+            "width": 276,
+          }
+        }
+      />
+    </Header>
+    <View
+      style={
+        {
+          "height": 870.7142857142858,
+          "marginTop": 19.71428571428571,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        source="background.png"
+        style={
+          {
+            "alignSelf": "center",
+            "height": 1080.54,
+            "position": "absolute",
+            "top": 16.42857142857143,
+            "width": 613.64,
+          }
+        }
+      />
+    </View>
+    <OnboardingButton
+      onPress={[Function]}
+      style={
+        {
+          "height": 92,
+        }
+      }
+      title="Continue"
+    />
+    <PaginationIndicator
+      active_screen="OnboardingOne"
+    />
+  </SafeAreaView>
+</View>
+`;

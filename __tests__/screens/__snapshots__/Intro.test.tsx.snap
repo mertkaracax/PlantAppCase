@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Intro renders correctly 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      [
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        {
+          "height": undefined,
+          "width": undefined,
+        },
+        undefined,
+      ]
+    }
+  />
+  <SafeAreaView
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <Header
+      height={139.64285714285714}
+      marginBottom={39.42857142857142}
+      subtitle="Identify more than 3000+ plants and
+ 88% accuracy."
+      title={
+        <Text
+          style={
+            [
+              {
+                "color": "#13231B",
+                "fontFamily": "Rubik_400Regular",
+                "fontSize": 56.00000000000001,
+                "letterSpacing": 0.14,
+                "lineHeight": 33.18,
+                "maxWidth": 630,
+              },
+              {
+                "maxWidth": 750,
+              },
+            ]
+          }
+        >
+          Welcome to 
+          <Text
+            style={
+              {
+                "fontFamily": "Rubik_600SemiBold",
+              }
+            }
+          >
+            PlantApp
+          </Text>
+        </Text>
+      }
+    />
+    <View
+      style={
+        {
+          "height": 819.7857142857143,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        source="background.png"
+        style={
+          {
+            "alignSelf": "center",
+            "flex": 1,
+            "resizeMode": "contain",
+          }
+        }
+      />
+    </View>
+    <OnboardingButton
+      onPress={[Function]}
+      style={
+        {
+          "height": 92,
+        }
+      }
+      title="Get Started"
+    />
+    <Footer />
+  </SafeAreaView>
+</View>
+`;

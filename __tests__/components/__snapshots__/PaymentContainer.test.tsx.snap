@@ -1,0 +1,1159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentContainer changes plan to monthly when the monthly button is pressed 1`] = `
+<View
+  style={
+    {
+      "marginTop": 31.21428571428571,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "backgroundColor": "#1c2923",
+          "borderRadius": 14,
+          "borderWidth": 0.5,
+          "height": 98.57142857142858,
+          "marginBottom": 26.285714285714285,
+          "width": 654,
+        },
+        {
+          "borderColor": "#28AF6E",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "borderRadius": 14,
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingLeft": 32,
+        }
+      }
+    >
+      <ViewManagerAdapter_ExpoLinearGradient
+        colors={
+          [
+            724086638,
+            2666350,
+          ]
+        }
+        endPoint={
+          [
+            0,
+            1,
+          ]
+        }
+        startPoint={
+          [
+            1,
+            0,
+          ]
+        }
+        style={
+          {
+            "borderRadius": 14,
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "height": 55.857142857142854,
+              "position": "relative",
+            }
+          }
+        >
+          <View
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#28AF6E",
+                  "borderRadius": 24,
+                  "height": 24,
+                  "justifyContent": "center",
+                  "marginRight": 24,
+                  "width": 24,
+                },
+                {
+                  "backgroundColor": "#28AF6E",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 24,
+                  "height": 9,
+                  "width": 9,
+                }
+              }
+            />
+          </View>
+          <View>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "fontFamily": "Rubik_500Medium",
+                  "fontSize": 32,
+                }
+              }
+            >
+              1 Month
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFFB2",
+                  "fontFamily": "Rubik_400Regular",
+                  "fontSize": 24,
+                }
+              }
+            >
+              $2.99/month, auto renewable
+            </Text>
+          </View>
+        </View>
+      </ViewManagerAdapter_ExpoLinearGradient>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "backgroundColor": "#1c2923",
+          "borderRadius": 14,
+          "borderWidth": 0.5,
+          "height": 98.57142857142858,
+          "marginBottom": 26.285714285714285,
+          "width": 654,
+        },
+        {
+          "borderColor": "#FFFFFF4D",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "borderRadius": 14,
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingLeft": 32,
+        }
+      }
+    >
+      <ViewManagerAdapter_ExpoLinearGradient
+        colors={
+          [
+            0,
+            0,
+          ]
+        }
+        endPoint={
+          [
+            0,
+            1,
+          ]
+        }
+        startPoint={
+          [
+            1,
+            0,
+          ]
+        }
+        style={
+          {
+            "borderRadius": 14,
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "height": 55.857142857142854,
+              "position": "relative",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#28AF6E",
+                "borderBottomLeftRadius": 20,
+                "borderTopRightRadius": 14,
+                "height": 42.714285714285715,
+                "justifyContent": "center",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 154,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "fontFamily": "Rubik_500Medium",
+                  "fontSize": 24,
+                }
+              }
+            >
+              Save 50%
+            </Text>
+          </View>
+          <View
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#28AF6E",
+                  "borderRadius": 24,
+                  "height": 24,
+                  "justifyContent": "center",
+                  "marginRight": 24,
+                  "width": 24,
+                },
+                {
+                  "backgroundColor": "#FFFFFF26",
+                },
+              ]
+            }
+          />
+          <View>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "fontFamily": "Rubik_500Medium",
+                  "fontSize": 32,
+                }
+              }
+            >
+              1 Year
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFFB2",
+                  "fontFamily": "Rubik_400Regular",
+                  "fontSize": 24,
+                }
+              }
+            >
+              First 3 days free, then $529,29/year
+            </Text>
+          </View>
+        </View>
+      </ViewManagerAdapter_ExpoLinearGradient>
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#28AF6E",
+        "borderRadius": 14,
+        "height": 85.42857142857143,
+        "justifyContent": "center",
+        "marginTop": 16.42857142857143,
+        "opacity": 1,
+        "width": 654,
+        "zIndex": 44,
+      }
+    }
+  >
+    <View>
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 16,
+          }
+        }
+      >
+        Continue
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`PaymentContainer changes plan to yearly when the yearly button is pressed 1`] = `
+<View
+  style={
+    {
+      "marginTop": 31.21428571428571,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "backgroundColor": "#1c2923",
+          "borderRadius": 14,
+          "borderWidth": 0.5,
+          "height": 98.57142857142858,
+          "marginBottom": 26.285714285714285,
+          "width": 654,
+        },
+        {
+          "borderColor": "#FFFFFF4D",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "borderRadius": 14,
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingLeft": 32,
+        }
+      }
+    >
+      <ViewManagerAdapter_ExpoLinearGradient
+        colors={
+          [
+            0,
+            0,
+          ]
+        }
+        endPoint={
+          [
+            0,
+            1,
+          ]
+        }
+        startPoint={
+          [
+            1,
+            0,
+          ]
+        }
+        style={
+          {
+            "borderRadius": 14,
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "height": 55.857142857142854,
+              "position": "relative",
+            }
+          }
+        >
+          <View
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#28AF6E",
+                  "borderRadius": 24,
+                  "height": 24,
+                  "justifyContent": "center",
+                  "marginRight": 24,
+                  "width": 24,
+                },
+                {
+                  "backgroundColor": "#FFFFFF26",
+                },
+              ]
+            }
+          />
+          <View>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "fontFamily": "Rubik_500Medium",
+                  "fontSize": 32,
+                }
+              }
+            >
+              1 Month
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFFB2",
+                  "fontFamily": "Rubik_400Regular",
+                  "fontSize": 24,
+                }
+              }
+            >
+              $2.99/month, auto renewable
+            </Text>
+          </View>
+        </View>
+      </ViewManagerAdapter_ExpoLinearGradient>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "backgroundColor": "#1c2923",
+          "borderRadius": 14,
+          "borderWidth": 0.5,
+          "height": 98.57142857142858,
+          "marginBottom": 26.285714285714285,
+          "width": 654,
+        },
+        {
+          "borderColor": "#28AF6E",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "borderRadius": 14,
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingLeft": 32,
+        }
+      }
+    >
+      <ViewManagerAdapter_ExpoLinearGradient
+        colors={
+          [
+            724086638,
+            2666350,
+          ]
+        }
+        endPoint={
+          [
+            0,
+            1,
+          ]
+        }
+        startPoint={
+          [
+            1,
+            0,
+          ]
+        }
+        style={
+          {
+            "borderRadius": 14,
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "height": 55.857142857142854,
+              "position": "relative",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#28AF6E",
+                "borderBottomLeftRadius": 20,
+                "borderTopRightRadius": 14,
+                "height": 42.714285714285715,
+                "justifyContent": "center",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 154,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "fontFamily": "Rubik_500Medium",
+                  "fontSize": 24,
+                }
+              }
+            >
+              Save 50%
+            </Text>
+          </View>
+          <View
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#28AF6E",
+                  "borderRadius": 24,
+                  "height": 24,
+                  "justifyContent": "center",
+                  "marginRight": 24,
+                  "width": 24,
+                },
+                {
+                  "backgroundColor": "#28AF6E",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 24,
+                  "height": 9,
+                  "width": 9,
+                }
+              }
+            />
+          </View>
+          <View>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "fontFamily": "Rubik_500Medium",
+                  "fontSize": 32,
+                }
+              }
+            >
+              1 Year
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFFB2",
+                  "fontFamily": "Rubik_400Regular",
+                  "fontSize": 24,
+                }
+              }
+            >
+              First 3 days free, then $529,29/year
+            </Text>
+          </View>
+        </View>
+      </ViewManagerAdapter_ExpoLinearGradient>
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#28AF6E",
+        "borderRadius": 14,
+        "height": 85.42857142857143,
+        "justifyContent": "center",
+        "marginTop": 16.42857142857143,
+        "opacity": 1,
+        "width": 654,
+        "zIndex": 44,
+      }
+    }
+  >
+    <View>
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 16,
+          }
+        }
+      >
+        Try free for 3 days
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`PaymentContainer renders correctly 1`] = `
+<View
+  style={
+    {
+      "marginTop": 31.21428571428571,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "backgroundColor": "#1c2923",
+          "borderRadius": 14,
+          "borderWidth": 0.5,
+          "height": 98.57142857142858,
+          "marginBottom": 26.285714285714285,
+          "width": 654,
+        },
+        {
+          "borderColor": "#FFFFFF4D",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "borderRadius": 14,
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingLeft": 32,
+        }
+      }
+    >
+      <ViewManagerAdapter_ExpoLinearGradient
+        colors={
+          [
+            0,
+            0,
+          ]
+        }
+        endPoint={
+          [
+            0,
+            1,
+          ]
+        }
+        startPoint={
+          [
+            1,
+            0,
+          ]
+        }
+        style={
+          {
+            "borderRadius": 14,
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "height": 55.857142857142854,
+              "position": "relative",
+            }
+          }
+        >
+          <View
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#28AF6E",
+                  "borderRadius": 24,
+                  "height": 24,
+                  "justifyContent": "center",
+                  "marginRight": 24,
+                  "width": 24,
+                },
+                {
+                  "backgroundColor": "#FFFFFF26",
+                },
+              ]
+            }
+          />
+          <View>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "fontFamily": "Rubik_500Medium",
+                  "fontSize": 32,
+                }
+              }
+            >
+              1 Month
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFFB2",
+                  "fontFamily": "Rubik_400Regular",
+                  "fontSize": 24,
+                }
+              }
+            >
+              $2.99/month, auto renewable
+            </Text>
+          </View>
+        </View>
+      </ViewManagerAdapter_ExpoLinearGradient>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "backgroundColor": "#1c2923",
+          "borderRadius": 14,
+          "borderWidth": 0.5,
+          "height": 98.57142857142858,
+          "marginBottom": 26.285714285714285,
+          "width": 654,
+        },
+        {
+          "borderColor": "#28AF6E",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "borderRadius": 14,
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingLeft": 32,
+        }
+      }
+    >
+      <ViewManagerAdapter_ExpoLinearGradient
+        colors={
+          [
+            724086638,
+            2666350,
+          ]
+        }
+        endPoint={
+          [
+            0,
+            1,
+          ]
+        }
+        startPoint={
+          [
+            1,
+            0,
+          ]
+        }
+        style={
+          {
+            "borderRadius": 14,
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "height": 55.857142857142854,
+              "position": "relative",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#28AF6E",
+                "borderBottomLeftRadius": 20,
+                "borderTopRightRadius": 14,
+                "height": 42.714285714285715,
+                "justifyContent": "center",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 154,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "fontFamily": "Rubik_500Medium",
+                  "fontSize": 24,
+                }
+              }
+            >
+              Save 50%
+            </Text>
+          </View>
+          <View
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#28AF6E",
+                  "borderRadius": 24,
+                  "height": 24,
+                  "justifyContent": "center",
+                  "marginRight": 24,
+                  "width": 24,
+                },
+                {
+                  "backgroundColor": "#28AF6E",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 24,
+                  "height": 9,
+                  "width": 9,
+                }
+              }
+            />
+          </View>
+          <View>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "fontFamily": "Rubik_500Medium",
+                  "fontSize": 32,
+                }
+              }
+            >
+              1 Year
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#FFFFFFB2",
+                  "fontFamily": "Rubik_400Regular",
+                  "fontSize": 24,
+                }
+              }
+            >
+              First 3 days free, then $529,29/year
+            </Text>
+          </View>
+        </View>
+      </ViewManagerAdapter_ExpoLinearGradient>
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#28AF6E",
+        "borderRadius": 14,
+        "height": 85.42857142857143,
+        "justifyContent": "center",
+        "marginTop": 16.42857142857143,
+        "opacity": 1,
+        "width": 654,
+        "zIndex": 44,
+      }
+    }
+  >
+    <View>
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 16,
+          }
+        }
+      >
+        Try free for 3 days
+      </Text>
+    </View>
+  </View>
+</View>
+`;
