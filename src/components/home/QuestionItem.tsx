@@ -1,4 +1,11 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  Linking,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React from "react";
 import { ch, cw } from "@src/style/dimensions";
 import { Question } from "@src/models/question";
@@ -9,9 +16,16 @@ type QuestionItemParams = {
   question: Question;
 };
 
+const handleLinking = (uri: string) => {
+  Linking.openURL(uri);
+};
+
 const QuestionItem: React.FC<QuestionItemParams> = ({ question }) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={handleLinking.bind(this, question.uri)}
+    >
       <Image
         style={styles.image}
         source={{
@@ -21,7 +35,7 @@ const QuestionItem: React.FC<QuestionItemParams> = ({ question }) => {
       <View style={styles.textContainer}>
         <Text style={styles.text}>{question.title}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

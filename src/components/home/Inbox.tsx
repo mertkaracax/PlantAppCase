@@ -18,9 +18,9 @@ const Inbox = () => {
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => {
-        AsyncStorage.setItem("onboardingCompleted", JSON.stringify(false));
-      }}
+      // onPress={() => { This was for quick testing
+      //   AsyncStorage.setItem("onboardingCompleted", JSON.stringify(false));
+      // }}
     >
       <Image style={styles.image} source={ICONS.mail} />
       <View style={styles.textContainer}>

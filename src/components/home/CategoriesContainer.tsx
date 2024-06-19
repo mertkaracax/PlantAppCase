@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { ActivityIndicator, StyleSheet, View } from "react-native";
 import React, { memo, useEffect, useState } from "react";
 import { ch, cw } from "@src/style/dimensions";
 import { Font, FontSize } from "@src/style/fonts";
@@ -14,6 +14,7 @@ type CategoriesContainerProps = {
 const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
   filter = "",
 }) => {
+  const [isLoading, setIsLoading] = useState(true);
   const [categories, setCategories] = useState<Array<Category>>([]);
 
   useEffect(() => {
@@ -25,6 +26,7 @@ const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
         (current: Category, next: Category) => next.id - current.id
       );
       setCategories(sortedCategories);
+      setIsLoading(false);
     };
     getCategories();
   }, []);
@@ -32,7 +34,8 @@ const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
   return (
     <View style={{ minHeight: ch(230) }}>
       <View style={styles.container}>
-        {categories &&
+        {!isLoading &&
+          categories &&
           categories
             .filter((category) => {
               return category.title
@@ -43,6 +46,9 @@ const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
               <CategoryItem category={category} key={category.id.toString()} />
             ))}
       </View>
+      {isLoading && (
+        <ActivityIndicator style={styles.loadingIcon} size={"large"} />
+      )}
     </View>
   );
 };
@@ -62,5 +68,10 @@ const styles = StyleSheet.create({
     fontSize: FontSize.SIZE15,
     fontFamily: Font.Medium,
     marginBottom: ch(16),
+  },
+  loadingIcon: {
+    position: "absolute",
+    top: ch(95),
+    left: cw(160),
   },
 });

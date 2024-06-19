@@ -1,7 +1,6 @@
 import {
   View,
   Text,
-  Button,
   ImageBackground,
   StyleSheet,
   TouchableOpacity,
@@ -58,17 +57,7 @@ const Paywall: React.FC<RouteProps> = ({ navigation, route }) => {
         source={IMAGES.paywall.background}
       >
         <TouchableOpacity
-          style={{
-            position: "absolute",
-            height: ch(24),
-            width: ch(24),
-            top: ch(55),
-            left: cw(335),
-            borderRadius: 24,
-            backgroundColor: "#00000066",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          style={styles.closeIcon}
           onPress={() => {
             navigation.navigate("BottomTab", { vanishMode: "slideDown" });
           }}
@@ -113,7 +102,7 @@ const Paywall: React.FC<RouteProps> = ({ navigation, route }) => {
       </Text>
       <Text
         style={{
-          marginTop: ch(10),
+          marginTop: Platform.OS === "ios" ? ch(10) : ch(5),
           fontFamily: Font.Regular,
           fontSize: FontSize.SIZE11,
           color: "#FFFFFF80",
@@ -133,6 +122,17 @@ const styles = StyleSheet.create({
     top: 0,
     height: ch(490),
     width: cw(375),
+  },
+  closeIcon: {
+    position: "absolute",
+    height: ch(24),
+    width: ch(24),
+    top: ch(55),
+    left: cw(335),
+    borderRadius: 24,
+    backgroundColor: "#00000066",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
