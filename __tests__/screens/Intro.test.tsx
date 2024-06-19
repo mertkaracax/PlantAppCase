@@ -5,7 +5,6 @@ import renderer, {
   ReactTestInstance,
 } from "react-test-renderer";
 import { RouteProps } from "@src/screens/types";
-import Header from "@src/components/UI/Header";
 import Footer from "@src/components/UI/Footer";
 
 jest.mock("@src/components/UI/Header", () => "Header");

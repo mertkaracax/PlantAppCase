@@ -34,7 +34,7 @@ const OnboardingOne: React.FC<RouteProps> = ({ navigation, route }) => {
   return (
     <ImageBackground
       style={{ flex: 1 }}
-      source={require("@src/assets/images/onboarding/o1.png")}
+      source={require("@src/assets/images/onboarding/Onboarding_1_white_bg.png")}
     >
       <SafeAreaView style={{ flex: 1 }}>
         <Header title={headerTitle} height={ch(75)}>

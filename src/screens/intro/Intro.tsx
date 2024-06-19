@@ -20,7 +20,7 @@ const Intro: React.FC<RouteProps> = ({ route, navigation }) => {
   return (
     <ImageBackground
       style={{ flex: 1 }}
-      source={require("@src/assets/images/onboarding/o1.png")}
+      source={require("@src/assets/images/onboarding/Onboarding_1_white_bg.png")}
     >
       <SafeAreaView style={styles.root}>
         <Header

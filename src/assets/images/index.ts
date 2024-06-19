@@ -16,9 +16,3 @@ export const IMAGES = {
     background: require("./paywall/Paywall_BG.png"),
   },
 };
-
-// export const ICONS = {
-//   detailed: require("../icons/Detailed.png"),
-//   scan: require("../icons/Scan.png"),
-//   speed: require("../icons/Speed.png"),
-// };
