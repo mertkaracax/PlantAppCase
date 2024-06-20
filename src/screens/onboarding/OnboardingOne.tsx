@@ -26,7 +26,7 @@ const OnboardingOne: React.FC<RouteProps> = ({ navigation, route }) => {
       ]}
     >
       Take a photo to{" "}
-      <Text style={{ fontFamily: Font.ExtraBold }}>identify {`\n`}</Text> the
+      <Text style={{ fontFamily: Font.ExtraBold }}>identify{`\n`}</Text>the
       plant!
     </Text>
   );

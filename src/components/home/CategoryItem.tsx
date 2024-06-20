@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: Color.CategoryItemBorderColor,
     marginBottom: ch(16),
-    backgroundColor: "#F4F6F6",
+    backgroundColor: Color.WHITE,
   },
   image: {
     flex: 1,

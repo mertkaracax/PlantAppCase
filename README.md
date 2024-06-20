@@ -16,4 +16,7 @@
 14. **In some areas, additional animations were added inspired by HubX's apps.**
 
 ## My Personal Thoughts 
-It was a project where I didn't want the deadline to come because I enjoyed working on it so much. I think I did my best with the time I had. I completed all the requirements as outlined in the case. As for my approach, there were areas I wished I had more time to refine and improve upon, but unfortunately, time ran out. 🤦🏻‍♂️ Thank you for this enjoyable experience. I'm eagerly looking forward to your feedback.
+It was a project where I didn't want the deadline to come because I enjoyed working on it so much. I think I did my best with the time I had. I believe I completed all the requirements as outlined in the case. As for my approach, there were areas I wished I had more time to refine and improve upon, but unfortunately, time ran out. 🤦🏻‍♂️ Thank you for this enjoyable experience. I'm eagerly looking forward to your feedback.
+
+## Additional Note
+After my time was up, I noticed a slight misalignment in the onboarding header due to an extra space character I had entered after the "\n". I made a small 2-line fix to correct it.

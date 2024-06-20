@@ -25,7 +25,7 @@ const Intro: React.FC<RouteProps> = ({ route, navigation }) => {
       <SafeAreaView style={styles.root}>
         <Header
           title={headerTitle}
-          subtitle={`Identify more than 3000+ plants and\n 88% accuracy.`}
+          subtitle={`Identify more than 3000+ plants and\n88% accuracy.`}
           height={ch(85)}
           marginBottom={ch(24)}
         />
